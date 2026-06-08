@@ -1,144 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Darryl Zorrilla | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darryl Zorrilla | Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <canvas id="bg"></canvas>
+<div class="background-glow"></div>
 
-  <header class="hero">
-    <nav>
-      <h1>DZ</h1>
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<header class="hero">
+<nav>
+<div class="logo">DZ</div>
 
-    <div class="hero-content">
-      <p class="tag">Software Engineer • Mobile • Full Stack • Systems</p>
-      <h2>Building scalable and interactive digital experiences.</h2>
-      <p class="intro">
-        I design and develop performant applications, internal tools, and user-focused systems.
-        Experienced with frontend, backend, cloud infrastructure, and mobile development.
-      </p>
+<div class="nav-links">
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-      <div class="buttons">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="https://github.com/" target="_blank" class="btn secondary">GitHub</a>
-      </div>
-    </div>
-  </header>
+<div class="hero-content">
+<p class="eyebrow">FULL-STACK & MOBILE ENGINEER</p>
 
-  <main>
-    <section id="projects">
-      <h3>Featured Projects</h3>
+<h1>
+Building scalable consumer products, immersive media experiences,
+and real-time applications.
+</h1>
 
-      <div class="project-grid">
+<p class="hero-description">
+10+ years building mobile apps, backend systems, and startup products across
+media, audio, mobility, and social platforms.
+</p>
 
-        <div class="card tilt">
-          <div class="card-content">
-            <span>01</span>
-            <h4>Offline Festival Tracking App</h4>
-            <p>
-              Built a BLE-based mobile concept enabling users to locate friends in crowded festival environments
-              using decentralized peer relays and offline synchronization.
-            </p>
-            <ul>
-              <li>React Native</li>
-              <li>BLE</li>
-              <li>AWS</li>
-            </ul>
-          </div>
-        </div>
+<div class="hero-buttons">
+<a class="primary-btn" href="#projects">View Projects</a>
+<a class="secondary-btn" href="https://github.com/">GitHub</a>
+</div>
+</div>
+</header>
 
-        <div class="card tilt">
-          <div class="card-content">
-            <span>02</span>
-            <h4>Strategy Board Game Platform</h4>
-            <p>
-              Designed a modern multiplayer adaptation of a tactical board game featuring matchmaking,
-              animations, and real-time gameplay synchronization.
-            </p>
-            <ul>
-              <li>Unity</li>
-              <li>WebSockets</li>
-              <li>Node.js</li>
-            </ul>
-          </div>
-        </div>
+<section class="skills-section" id="skills">
+<div class="section-header">
+<p class="section-label">CORE STACK</p>
+<h2>Selected Technologies</h2>
+</div>
 
-        <div class="card tilt">
-          <div class="card-content">
-            <span>03</span>
-            <h4>Internal Operations Dashboard</h4>
-            <p>
-              Developed enterprise tooling to improve operational visibility, automate workflows,
-              and streamline reporting pipelines for internal teams.
-            </p>
-            <ul>
-              <li>React</li>
-              <li>PostgreSQL</li>
-              <li>Docker</li>
-            </ul>
-          </div>
-        </div>
+<div class="skills-grid">
+<span>SwiftUI</span>
+<span>React Native</span>
+<span>Python</span>
+<span>Django</span>
+<span>NestJS</span>
+<span>Firebase</span>
+<span>GraphQL</span>
+<span>Docker</span>
+<span>AWS</span>
+<span>DevOps</span>
+</div>
+</section>
 
-      </div>
-    </section>
+<section class="projects-section" id="projects">
+<div class="section-header">
+<p class="section-label">FEATURED WORK</p>
+<h2>Selected Projects</h2>
+</div>
 
-    <section id="experience">
-      <h3>Experience</h3>
+<div class="project-grid">
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Software Engineer</h4>
-          <p>
-            Worked across frontend, backend, and cloud infrastructure projects focusing on performance,
-            usability, and scalable architecture.
-          </p>
-        </div>
+<div class="project-card featured">
+<h3>SoundFi</h3>
+<p>
+Immersive 3D sound experience for movie theaters with synchronized audio playback through personal headphones.
+</p>
+</div>
 
-        <div class="timeline-item">
-          <h4>Systems & Automation</h4>
-          <p>
-            Built automation workflows and monitoring systems to reduce manual operational overhead.
-          </p>
-        </div>
-      </div>
-    </section>
+<div class="project-card">
+<h3>HED Unity</h3>
+<p>
+iOS companion app for Unity headphones focused on premium audio experiences and hardware integration.
+</p>
+</div>
 
-    <section id="skills">
-      <h3>Tech Stack</h3>
+<div class="project-card">
+<h3>Red Bull Radar</h3>
+<p>
+Consumer-facing mobile platform supporting branded engagement and realtime experiences.
+</p>
+</div>
 
-      <div class="skills">
-        <span>React</span>
-        <span>React Native</span>
-        <span>Node.js</span>
-        <span>AWS</span>
-        <span>Docker</span>
-        <span>PostgreSQL</span>
-        <span>Unity</span>
-        <span>Python</span>
-        <span>TypeScript</span>
-      </div>
-    </section>
+<div class="project-card">
+<h3>Ojo Electric</h3>
+<p>
+Electric scooter rental service with scalable mobile experiences and backend integrations.
+</p>
+</div>
 
-    <section id="contact">
-      <h3>Contact</h3>
+<div class="project-card">
+<h3>Vurple</h3>
+<p>
+Livestreaming platform enabling realtime interaction between public officials and followers.
+</p>
+</div>
 
-      <div class="contact-box">
-        <p>Interested in collaborating or discussing opportunities?</p>
-        <a href="mailto:youremail@example.com" class="btn primary">Get In Touch</a>
-      </div>
-    </section>
-  </main>
+<div class="project-card">
+<h3>Linktune</h3>
+<p>
+Universal music player combining multiple music providers into a single searchable platform.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="timeline-section" id="experience">
+<div class="section-header">
+<p class="section-label">TIMELINE</p>
+<h2>Product Development Journey</h2>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span>2014</span>
+<div>
+<h4>Consumer Apps</h4>
+<p>Built early music, social, and utility platforms.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<span>2017</span>
+<div>
+<h4>Media & Audio</h4>
+<p>Worked on immersive entertainment experiences and mobile audio products.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<span>2020</span>
+<div>
+<h4>Hardware & Mobility</h4>
+<p>Expanded into connected devices, mobility, and advanced mobile systems.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="section-header">
+<p class="section-label">CONTACT</p>
+<h2>Let's Build Something</h2>
+</div>
+
+<p class="contact-text">
+Available for product engineering, mobile development, and startup collaborations.
+</p>
+
+<div class="contact-links">
+<a href="https://github.com/">GitHub</a>
+<a href="https://linkedin.com/">LinkedIn</a>
+<a href="mailto:you@example.com">Email</a>
+</div>
+</section>
 
 </body>
 </html>
