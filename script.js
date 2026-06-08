@@ -11,7 +11,6 @@ if (canvas) {
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
-  // Reduce particle count on mobile to save battery
   const isMobile = window.innerWidth < 768;
   const PARTICLE_COUNT = isMobile ? 40 : 120;
 
@@ -48,22 +47,15 @@ if (canvas) {
   animate();
 }
 
-// ─── Project card 3D tilt effect ──────────────────────────────────────────────
-document.querySelectorAll('.tilt').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const rotateY = ((x / rect.width) - 0.5) * 10;
-    const rotateX = ((y / rect.height) - 0.5) * -10;
-
-    card.style.transform =
-      `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+// ─── Project card Flip effect ──────────────────────────────────────────────
+document.querySelectorAll('.flip-card').forEach(card => {
+  card.addEventListener('click', () => {
+    // Optional: close other cards when one is opened
+    // document.querySelectorAll('.flip-card').forEach(c => {
+    //   if (c !== card) c.classList.remove('flipped');
+    // });
+    
+    card.classList.toggle('flipped');
   });
 });
 
@@ -78,7 +70,6 @@ if (hamburger && navLinks) {
     hamburger.setAttribute('aria-expanded', isOpen);
   });
 
-  // Close drawer when a nav link is clicked
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('mobile-open');

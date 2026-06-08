@@ -5,17 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Darryl Zorrilla — Full-Stack & Mobile Engineer with 10+ years building consumer products, mobile apps, and scalable backend systems across media, audio, mobility, and social platforms.">
-  <title>Darryl Zorrilla</title>
+    content="Darryl Zorrilla — Senior Full-Stack & Mobile Engineer with 10+ years architecting consumer products, scalable backend systems, and cross-platform mobile apps across media, audio, mobility, and social platforms.">
+  <meta name="keywords"
+    content="Senior Software Engineer, Full-Stack Engineer, Mobile Engineer, iOS, React Native, NestJS, TypeScript, AWS, Portfolio">
+  <meta property="og:title" content="Darryl Zorrilla — Senior Software Engineer">
+  <meta property="og:description" content="10+ years building scalable consumer products and mobile apps.">
+  <title>Darryl Zorrilla — Senior Software Engineer</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <canvas id="bg"></canvas>
   <div class="background-glow"></div>
+  <div class="background-glow-2"></div>
 
+  <!-- ─── NAV ─────────────────────────────────────────── -->
   <header class="hero">
     <nav>
       <div class="logo">DZ</div>
@@ -25,6 +32,7 @@
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+        <a href="mailto:djzorrilla@yahoo.com" class="nav-cta" id="nav-cta-btn">Hire Me</a>
       </div>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
@@ -34,183 +42,463 @@
       </button>
     </nav>
 
+    <!-- ─── HERO ──────────────────────────────────────── -->
     <div class="hero-content">
-      <p class="eyebrow">FULL-STACK &amp; MOBILE ENGINEER</p>
+      <p class="eyebrow">SENIOR FULL-STACK &amp; MOBILE ENGINEER</p>
 
       <h1>
-        Building scalable consumer products, immersive media experiences,
-        and real-time applications.
+        I architect and ship<br>
+        <span class="gradient-text">products people love.</span>
       </h1>
 
       <p class="hero-description">
-        10+ years building mobile apps, backend systems, and startup products across
-        media, audio, mobility, and social platforms.
+        15+ years turning ideas into live, production-accessible apps — from native iOS and React Native to NestJS APIs,
+        cloud infrastructure, and real-time systems. I've led development at startups and agencies
+        across media, audio, mobility, and social platforms.
       </p>
 
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Apps in Production</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">Full Stack</span>
+          <span class="stat-label">Mobile · API · Infra</span>
+        </div>
+      </div>
+
       <div class="hero-buttons">
-        <a class="primary-btn" href="#projects">View Projects</a>
+        <a class="primary-btn" href="#projects" id="view-projects-btn">View Projects</a>
+        <a class="secondary-btn" href="https://www.linkedin.com/in/djzorrilla" target="_blank" rel="noopener noreferrer"
+          id="linkedin-btn">LinkedIn ↗</a>
       </div>
     </div>
   </header>
 
+  <!-- ─── SKILLS ───────────────────────────────────────── -->
   <section class="skills-section" id="skills">
     <div class="section-header">
       <p class="section-label">CORE STACK</p>
-      <h2>Selected Technologies</h2>
+      <h2>Technologies &amp; Tools</h2>
     </div>
 
-    <div class="skills-grid">
-      <span>SwiftUI</span>
-      <span>Swift</span>
-      <span>Objective-C</span>
-      <span>React Native</span>
-      <span>React</span>
-      <span>Expo</span>
-      <span>TypeScript</span>
-      <span>Python</span>
-      <span>Django</span>
-      <span>NestJS</span>
-      <span>PostgreSQL</span>
-      <span>GraphQL</span>
-      <span>Firebase</span>
-      <span>TypeORM</span>
-      <span>Redis</span>
-      <span>WebSockets</span>
-      <span>Docker</span>
-      <span>Terraform</span>
-      <span>AWS</span>
-      <span>DevOps</span>
-      <span>Stripe</span>
+    <div class="skills-categories">
+      <div class="skill-group">
+        <p class="skill-group-label">Mobile</p>
+        <div class="skills-grid">
+          <span>SwiftUI</span>
+          <span>Swift</span>
+          <span>Objective-C</span>
+          <span>React Native</span>
+          <span>Expo</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Frontend</p>
+        <div class="skills-grid">
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Next.js</span>
+          <span>GraphQL</span>
+          <span>HTML / CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Backend</p>
+        <div class="skills-grid">
+          <span>NestJS</span>
+          <span>Node.js</span>
+          <span>Python</span>
+          <span>Django</span>
+          <span>REST APIs</span>
+          <span>WebSockets</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Data &amp; Infra</p>
+        <div class="skills-grid">
+          <span>PostgreSQL</span>
+          <span>Redis</span>
+          <span>TypeORM</span>
+          <span>Firebase</span>
+          <span>AWS</span>
+          <span>Terraform</span>
+          <span>Docker</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Integrations</p>
+        <div class="skills-grid">
+          <span>Stripe</span>
+          <span>Twilio</span>
+          <span>SendGrid</span>
+          <span>Analytics</span>
+          <span>Push Notifications</span>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- ─── PROJECTS ─────────────────────────────────────── -->
   <section class="projects-section" id="projects">
     <div class="section-header">
       <p class="section-label">FEATURED WORK</p>
       <h2>Selected Projects</h2>
+      <p class="section-subtitle">Tap a card to see what I built and the tech behind it.</p>
     </div>
 
     <div class="project-grid">
 
-      <div class="project-card featured">
-        <h3><a href="https://www.schoolyardsocial.vip" target="_blank" rel="noopener noreferrer">Schoolyard</a></h3>
-        <p>
-          A comprehensive social platform for organizing and participating in sports events, tournaments, and leagues
-          with features like brackets, round-robins, and live leaderboards.
-        </p>
+      <!-- Schoolyard -->
+      <div class="flip-card featured" id="card-schoolyard">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">Lead Engineer · ISBX</div>
+            <h3><a href="https://www.schoolyardsocial.vip" target="_blank" rel="noopener noreferrer">Schoolyard
+                Social</a></h3>
+            <p>
+              Full-platform sports social app for organizing tournaments, leagues, and events with live brackets,
+              real-time leaderboards, and community feeds.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>Architected monorepo covering mobile, API, CMS &amp; infra</li>
+              <li>Built real-time tournament brackets &amp; round-robin logic</li>
+              <li>Implemented live leaderboards via WebSockets</li>
+              <li>Stripe payments &amp; subscription management</li>
+              <li>AWS + Terraform cloud deployment pipeline</li>
+            </ul>
+            <div class="tech-tags">
+              <span>React Native</span><span>Expo</span><span>NestJS</span><span>TypeScript</span>
+              <span>PostgreSQL</span><span>Redis</span><span>WebSockets</span>
+              <span>Stripe</span><span>AWS</span><span>Terraform</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">CYNQ</a></h3>
-        <p>
-          A social media application for browsing movies, sharing opinions, and discovering activities with friends.
-        </p>
+      <!-- CYNQ -->
+      <div class="flip-card" id="card-cynq">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">Lead Engineer · ISBX</div>
+            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">CYNQ</a></h3>
+            <p>
+              Social discovery app for movies, opinions, and shared activities — helping friends find
+              what to watch and do together.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>iOS app in SwiftUI with social feed &amp; activity discovery</li>
+              <li>NestJS REST API with GraphQL layer</li>
+              <li>CMS (React) for content &amp; moderation</li>
+              <li>Infrastructure as code with Terraform on AWS</li>
+            </ul>
+            <div class="tech-tags">
+              <span>SwiftUI</span><span>Swift</span><span>NestJS</span>
+              <span>React Native</span><span>GraphQL</span><span>TypeORM</span>
+              <span>AWS</span><span>Terraform</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">FriendlyBet</a></h3>
-        <p>
-          An application designed to facilitate, manage, and track friendly bets between individuals with a social
-          interface for reactions and comments.
-        </p>
+      <!-- FriendlyBet -->
+      <div class="flip-card" id="card-friendlybet">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">Lead Engineer · ISBX</div>
+            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">FriendlyBet</a></h3>
+            <p>
+              Social wagering platform for creating, managing, and settling friendly bets with real-time
+              reactions, comments, and bet tracking.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>End-to-end bet lifecycle management system</li>
+              <li>Real-time social feed with reactions &amp; comments</li>
+              <li>React Native cross-platform mobile app</li>
+              <li>NestJS backend with AWS RDS &amp; Terraform infra</li>
+            </ul>
+            <div class="tech-tags">
+              <span>React Native</span><span>NestJS</span><span>TypeScript</span>
+              <span>PostgreSQL</span><span>Firebase</span><span>AWS</span><span>Terraform</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a href="https://www.isbx.com/work/sound-fi" target="_blank" rel="noopener noreferrer">SoundFi</a></h3>
-        <p>
-          Immersive 3D sound experience for movie theaters with synchronized audio playback through personal
-          headphones.
-        </p>
+      <!-- SoundFi -->
+      <div class="flip-card" id="card-soundfi">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">Senior Mobile &amp; API Engineer · ISBX</div>
+            <h3><a href="https://www.isbx.com/work/sound-fi" target="_blank" rel="noopener noreferrer">SoundFi</a></h3>
+            <p>
+              Immersive 3D spatial audio experience for movie theaters — synchronized audio playback
+              through personal headphones.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>Native iOS application architecture and development</li>
+              <li>REST API design and integration for theater venues</li>
+              <li>Audio session management and headphone routing</li>
+              <li>Performance optimization for media playback</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Swift</span><span>Objective-C</span><span>Node.js</span>
+              <span>REST APIs</span><span>PostgreSQL</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a href="https://getunity.com" target="_blank" rel="noopener noreferrer">HED Unity</a></h3>
-        <p>
-          iOS companion app for Unity headphones focused on premium audio experiences and hardware
-          integration.
-        </p>
+      <!-- HED Unity -->
+      <div class="flip-card" id="card-hed">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">iOS Engineer · ISBX</div>
+            <h3><a href="https://getunity.com" target="_blank" rel="noopener noreferrer">HED Unity</a></h3>
+            <p>
+              Premium iOS companion app for HED Unity headphones — hardware pairing, audio EQ,
+              and firmware update management.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>BLE hardware pairing &amp; device management</li>
+              <li>Custom audio EQ with real-time DSP</li>
+              <li>OTA firmware update delivery system</li>
+              <li>Premium onboarding &amp; subscription UI</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Swift</span><span>SwiftUI</span><span>CoreBluetooth</span>
+              <span>AVFoundation</span><span>StoreKit</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a href="https://www.isbx.com/work/red-bull" target="_blank" rel="noopener noreferrer">Red Bull Radar</a>
-        </h3>
-        <p>
-          Consumer-facing mobile platform supporting branded engagement and realtime experiences.
-        </p>
+      <!-- Red Bull Radar -->
+      <div class="flip-card" id="card-redbull">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">Lead Engineer · ISBX</div>
+            <h3><a href="https://www.isbx.com/work/red-bull" target="_blank" rel="noopener noreferrer">Red Bull
+                Radar</a></h3>
+            <p>
+              Consumer-facing mobile platform for Red Bull's branded events, athlete content,
+              and real-time engagement campaigns.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>Cross-platform mobile app (iOS &amp; Android)</li>
+              <li>Real-time event &amp; location-aware content feeds</li>
+              <li>Push notification campaign integration</li>
+              <li>Analytics &amp; engagement tracking</li>
+            </ul>
+            <div class="tech-tags">
+              <span>React Native</span><span>TypeScript</span><span>Firebase</span>
+              <span>Push Notifications</span><span>Analytics</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a
-            href="https://www.forbes.com/sites/joannmuller/2018/11/27/ford-branded-electric-scooters-offer-a-more-stable-ride-than-bird-or-lime/"
-            target="_blank" rel="noopener noreferrer">OjO Electric</a></h3>
-        <p>
-          Electric scooter rental service with scalable mobile experiences and backend integrations. <a
-            href="https://www.isbx.com/work/ojo" target="_blank" rel="noopener noreferrer">See more..</a>
-        </p>
+      <!-- OjO Electric -->
+      <div class="flip-card" id="card-ojo">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">Lead Engineer · ISBX</div>
+            <h3><a href="https://www.isbx.com/work/ojo" target="_blank" rel="noopener noreferrer">OjO Electric</a></h3>
+            <p>
+              Electric scooter rental platform — featured in Forbes for its stability tech.
+              Full mobile experience with IoT backend integrations.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>iOS &amp; Android rental &amp; unlock flow</li>
+              <li>IoT scooter telemetry &amp; GPS tracking integration</li>
+              <li>Stripe payment &amp; subscription billing</li>
+              <li>Scalable fleet management backend</li>
+            </ul>
+            <div class="tech-tags">
+              <span>React Native</span><span>Swift</span><span>Node.js</span>
+              <span>IoT / MQTT</span><span>Stripe</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a href="https://pitchbook.com/profiles/company/484176-25#overview" target="_blank"
-            rel="noopener noreferrer">Vurple</a></h3>
-        <p>
-          Livestreaming platform enabling realtime interaction between public officials and followers.
-        </p>
+      <!-- Vurple -->
+      <div class="flip-card" id="card-vurple">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">Lead Engineer · ISBX</div>
+            <h3><a href="https://pitchbook.com/profiles/company/484176-25#overview" target="_blank"
+                rel="noopener noreferrer">Vurple</a></h3>
+            <p>
+              Livestreaming civic engagement platform for real-time interaction between
+              public officials and their communities.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>Live video streaming with real-time Q&amp;A</li>
+              <li>Audience polling &amp; reaction system</li>
+              <li>Native iOS app with WebRTC integration</li>
+              <li>Scalable streaming backend</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Swift</span><span>WebRTC</span><span>Objective-C</span>
+              <span>Node.js</span><span>Firebase</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3><a href="https://www.isbx.com/work/linktune" target="_blank" rel="noopener noreferrer">Linktune</a></h3>
-        <p>
-          Universal music player combining multiple music providers into a single searchable platform.
-        </p>
+      <!-- Apple Beats -->
+      <div class="flip-card" id="card-beats">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-tag">iOS Engineer · ISBX</div>
+            <h3><a href="https://www.isbx.com/work/apple-beats" target="_blank" rel="noopener noreferrer">Apple (Beats
+                by Dre)</a></h3>
+            <p>
+              Official companion iOS application for the Beats Pill+ speaker line. Enabled users to control,
+              manage, and sync multiple hardware speakers.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>Native iOS companion app for Beats Pill+</li>
+              <li>Bluetooth LE device discovery and pairing</li>
+              <li>Custom multi-speaker sync (DJ and Stereo modes)</li>
+              <li>Hardware state management and battery monitoring</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Objective-C</span><span>Swift</span><span>CoreBluetooth</span>
+              <span>UIKit</span><span>Hardware Integration</span>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
+
+    <div class="notable-work">
+      <h3>Other Notable Apps Shipped</h3>
+      <ul class="notable-list">
+        <li><strong>Linktune:</strong> Universal music discovery app combining Spotify, Apple Music, and SoundCloud.
+        </li>
+        <li><strong>Guard Grabber:</strong> On-demand security and personal protection service platform.</li>
+        <li><strong>Pikkup:</strong> On-demand delivery and moving platform connecting users with drivers and movers.
+        </li>
+        <li><strong>Inventoryy:</strong> Comprehensive inventory management system for businesses.</li>
+        <li><strong>Ribbon:</strong> Event ticketing platform aggregating inventory from major providers like
+          Ticketmaster and StubHub.</li>
+        <li><strong>FileKeepers:</strong> Secure enterprise document management and tracking.</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- ─── EXPERIENCE ────────────────────────────────────── -->
   <section class="timeline-section" id="experience">
     <div class="section-header">
-      <p class="section-label">TIMELINE</p>
-      <h2>Product Development Journey</h2>
+      <p class="section-label">CAREER TIMELINE</p>
+      <h2>Professional Journey</h2>
     </div>
 
     <div class="timeline">
 
       <div class="timeline-item">
-        <span>2014</span>
-        <div>
-          <h4>Consumer Apps</h4>
-          <p>Built early music, social, and utility platforms.</p>
+        <div class="timeline-left">
+          <span class="timeline-year">2023–Now</span>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-right">
+          <h4>Lead Full-Stack Engineer</h4>
+          <p class="timeline-company">ISBX</p>
+          <p>Architecting and building full-stack social platforms from the ground up — including Schoolyard Social,
+            CYNQ, and FriendlyBet. Leading development across mobile apps, NestJS APIs, CMS, and cloud infra.</p>
         </div>
       </div>
 
       <div class="timeline-item">
-        <span>2017</span>
-        <div>
-          <h4>Media &amp; Audio</h4>
-          <p>Worked on immersive entertainment experiences and mobile audio products.</p>
+        <div class="timeline-left">
+          <span class="timeline-year">2018–2023</span>
+          <div class="timeline-dot"></div>
         </div>
-      </div>
-
-      <div class="timeline-item">
-        <span>2020</span>
-        <div>
-          <h4>Hardware &amp; Mobility</h4>
-          <p>Expanded into connected devices, mobility, and advanced mobile systems.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <span>2024</span>
-        <div>
-          <h4>Social &amp; Sports Platforms</h4>
-          <p>Architected comprehensive platforms like Schoolyard and CYNQ for event management and social engagement.
+        <div class="timeline-right">
+          <h4>Lead Mobile Engineer &amp; Architect</h4>
+          <p class="timeline-company">ISBX</p>
+          <p>Delivered 8+ production mobile apps for clients including Red Bull, OjO Electric, HED, SoundFi, and
+            Linktune. Architected mobile systems at scale, established best practices, and mentored engineering teams.
           </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="timeline-year">2014–2018</span>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-right">
+          <h4>iOS &amp; Mobile Engineer</h4>
+          <p class="timeline-company">ISBX</p>
+          <p>Built consumer utility, music, and social apps. Developed foundational skills in native iOS (Obj-C →
+            Swift), REST APIs, and product-focused mobile engineering.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <span class="timeline-year">2010–2013</span>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-right">
+          <h4>Freelance Web Developer &amp; Designer</h4>
+          <p class="timeline-company">Independent</p>
+          <p>Designed and built custom websites for local businesses and early clients. Established core fundamentals in
+            full-stack web development, UX/UI design, and client relations.</p>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- ─── CONTACT ───────────────────────────────────────── -->
   <section class="contact-section" id="contact">
     <div class="section-header">
       <p class="section-label">CONTACT</p>
@@ -218,12 +506,14 @@
     </div>
 
     <p class="contact-text">
-      Available for product engineering, mobile development, and startup collaborations.
+      Open to senior engineering roles, founding engineer positions, and high-impact
+      startup collaborations. Let's talk.
     </p>
 
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/djzorrilla" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="mailto:djzorrilla@yahoo.com">Email</a>
+      <a href="https://www.linkedin.com/in/djzorrilla" target="_blank" rel="noopener noreferrer"
+        id="contact-linkedin">LinkedIn ↗</a>
+      <a href="mailto:djzorrilla@yahoo.com" id="contact-email">djzorrilla@yahoo.com</a>
     </div>
   </section>
 
