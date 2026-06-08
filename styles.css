@@ -257,6 +257,16 @@ section {
   font-size: 1.8rem;
 }
 
+.project-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-card h3 a:hover {
+  color: var(--accent);
+}
+
 .project-card p,
 .timeline-item p,
 .contact-text {
