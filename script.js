@@ -50,18 +50,26 @@ if (canvas) {
 // ─── Project card Flip effect ──────────────────────────────────────────────
 document.querySelectorAll('.flip-card').forEach(card => {
   card.addEventListener('click', (e) => {
+    const clickedLink = e.target.closest('a');
+    
     // On mobile (≤768px), prevent links from navigating — let the card expand instead
     const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
       // If user tapped a link and the card is already flipped/expanded, allow navigation
-      const clickedLink = e.target.closest('a');
       if (clickedLink && card.classList.contains('flipped')) {
+        e.stopPropagation();
         return; // let the link navigate normally
       }
       // Otherwise block link navigation and toggle the card
       if (clickedLink) {
         e.preventDefault();
+      }
+    } else {
+      // On desktop, if they clicked a link, let them navigate without flipping
+      if (clickedLink) {
+        e.stopPropagation();
+        return;
       }
     }
     
@@ -88,3 +96,58 @@ if (hamburger && navLinks) {
     });
   });
 }
+
+// ─── Cursor Spotlight Tracker (LERP) ───────────────────────────────────────
+const cursorGlow = document.getElementById('cursor-glow');
+
+if (cursorGlow) {
+  let mouseX = -500; // start off-screen
+  let mouseY = -500;
+  let glowX = mouseX;
+  let glowY = mouseY;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Soft fade in on first movement
+  let firstMove = true;
+  window.addEventListener('mousemove', () => {
+    if (firstMove) {
+      cursorGlow.style.opacity = '1';
+      firstMove = false;
+    }
+  }, { once: true });
+
+  function updateGlowPosition() {
+    glowX += (mouseX - glowX) * 0.08;
+    glowY += (mouseY - glowY) * 0.08;
+
+    cursorGlow.style.transform = `translate3d(${glowX}px, ${glowY}px, 0) translate(-50%, -50%)`;
+    requestAnimationFrame(updateGlowPosition);
+  }
+  updateGlowPosition();
+}
+
+// ─── Card Interactive Hover Effects ─────────────────────────────────────────
+document.querySelectorAll('.flip-card').forEach(card => {
+  const front = card.querySelector('.flip-card-front');
+  const back = card.querySelector('.flip-card-back');
+  
+  function handleMouseMove(e, element) {
+    const rect = element.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    element.style.setProperty('--mouse-x', `${x}px`);
+    element.style.setProperty('--mouse-y', `${y}px`);
+  }
+
+  if (front) {
+    front.addEventListener('mousemove', (e) => handleMouseMove(e, front));
+  }
+  if (back) {
+    back.addEventListener('mousemove', (e) => handleMouseMove(e, back));
+  }
+});
+

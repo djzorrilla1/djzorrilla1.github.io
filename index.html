@@ -21,6 +21,7 @@
   <canvas id="bg"></canvas>
   <div class="background-glow"></div>
   <div class="background-glow-2"></div>
+  <div class="cursor-glow" id="cursor-glow"></div>
 
   <!-- ─── NAV ─────────────────────────────────────────── -->
   <header class="hero">
@@ -100,35 +101,45 @@
           <span>TypeScript</span>
           <span>JavaScript</span>
           <span>Swift</span>
-          <span>SwiftUI</span>
           <span>Objective-C</span>
+          <span>Kotlin</span>
           <span>Python</span>
           <span>GraphQL</span>
+          <span>SQL</span>
           <span>HTML / CSS</span>
         </div>
       </div>
       <div class="skill-group">
-        <p class="skill-group-label">Frameworks</p>
+        <p class="skill-group-label">Frameworks & Libraries</p>
         <div class="skills-grid">
-          <span>React</span>
           <span>React Native</span>
           <span>Expo</span>
+          <span>React</span>
           <span>Next.js</span>
           <span>NestJS</span>
           <span>Node.js</span>
-          <span>Loopback</span>
-          <span>gRPC</span>
+          <span>Angular</span>
+          <span>RxSwift</span>
+          <span>RealmSwift</span>
+          <span>LoopBack</span>
+          <span>CoreBluetooth</span>
+          <span>AVFoundation</span>
+          <span>gRPC / Protobuf</span>
           <span>WebSockets</span>
+          <span>Sencha Touch / Cordova</span>
         </div>
       </div>
       <div class="skill-group">
-        <p class="skill-group-label">Cloud &amp; Infra</p>
+        <p class="skill-group-label">Cloud & Infra</p>
         <div class="skills-grid">
-          <span>AWS (S3, CloudFront, EC2)</span>
-          <span>Serverless</span>
+          <span>AWS (S3, EC2, CloudFront)</span>
+          <span>AWS Lambda / Serverless</span>
+          <span>AWS Cognito</span>
+          <span>AWS AppSync</span>
+          <span>AWS ECS / ELB</span>
           <span>Docker</span>
-          <span>Firebase</span>
           <span>Terraform</span>
+          <span>Firebase</span>
           <span>CI / CD Pipelines</span>
         </div>
       </div>
@@ -137,7 +148,9 @@
         <div class="skills-grid">
           <span>PostgreSQL</span>
           <span>MySQL</span>
+          <span>DynamoDB</span>
           <span>Redis</span>
+          <span>Realm</span>
           <span>TypeORM</span>
           <span>Database Design</span>
         </div>
@@ -148,21 +161,26 @@
           <span>Stripe</span>
           <span>Plaid</span>
           <span>Twilio</span>
-          <span>SendGrid</span>
+          <span>Auth0 / AWS Cognito</span>
+          <span>HealthKit</span>
           <span>Google Maps</span>
           <span>Apple Maps</span>
-          <span>SoundCloud</span>
-          <span>YouTube</span>
+          <span>MQTT / IoT</span>
+          <span>Applozic</span>
+          <span>SendGrid</span>
           <span>Spotify</span>
         </div>
       </div>
       <div class="skill-group">
-        <p class="skill-group-label">DevOps</p>
+        <p class="skill-group-label">DevOps & Tooling</p>
         <div class="skills-grid">
-          <span>App Store &amp; Google Play Deployment</span>
-          <span>API Deployments</span>
+          <span>Fastlane</span>
+          <span>EAS Build</span>
+          <span>Jenkins</span>
+          <span>Bitbucket Pipelines</span>
+          <span>App Store &amp; Google Play</span>
           <span>Push Notifications</span>
-          <span>Analytics</span>
+          <span>Analytics &amp; Crashlytics</span>
         </div>
       </div>
     </div>
@@ -182,9 +200,12 @@
       <div class="flip-card featured" id="card-schoolyard">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/schoolyard.png" alt="Schoolyard Social app preview" loading="lazy">
+            </div>
             <div class="card-tag">Lead Engineer · ISBX</div>
             <h3><a href="https://www.schoolyardsocial.vip" target="_blank" rel="noopener noreferrer">Schoolyard
-                Social</a></h3>
+                Social <span class="link-icon">↗</span></a></h3>
             <p>
               Full-platform sports social app for organizing tournaments, leagues, and events with live brackets,
               real-time leaderboards, and community feeds.
@@ -213,8 +234,11 @@
       <div class="flip-card" id="card-cynq">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/cynq.png" alt="CYNQ app preview" loading="lazy">
+            </div>
             <div class="card-tag">Senior Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">CYNQ</a></h3>
+            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">CYNQ <span class="link-icon">↗</span></a></h3>
             <p>
               Social discovery app for movies, opinions, and shared activities — helping friends find
               what to watch and do together.
@@ -243,8 +267,11 @@
       <div class="flip-card" id="card-friendlybet">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/friendlybet.png" alt="FriendlyBet app preview" loading="lazy">
+            </div>
             <div class="card-tag">Lead Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">FriendlyBet</a></h3>
+            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">FriendlyBet <span class="link-icon">↗</span></a></h3>
             <p>
               Social wagering platform for creating, managing, and settling friendly bets with real-time
               reactions, comments, and bet tracking.
@@ -271,8 +298,11 @@
       <div class="flip-card" id="card-soundfi">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/soundfi.png" alt="SoundFi app preview" loading="lazy">
+            </div>
             <div class="card-tag">Senior Mobile &amp; API Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com/work/sound-fi" target="_blank" rel="noopener noreferrer">SoundFi</a></h3>
+            <h3><a href="https://www.isbx.com/work/sound-fi" target="_blank" rel="noopener noreferrer">SoundFi <span class="link-icon">↗</span></a></h3>
             <p>
               Immersive 3D spatial audio experience for movie theaters — synchronized audio playback
               through personal headphones.
@@ -299,8 +329,11 @@
       <div class="flip-card" id="card-hed">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/hed_unity.png" alt="HED Unity app preview" loading="lazy">
+            </div>
             <div class="card-tag">iOS Engineer · ISBX</div>
-            <h3><a href="https://getunity.com" target="_blank" rel="noopener noreferrer">HED Unity</a></h3>
+            <h3><a href="https://getunity.com" target="_blank" rel="noopener noreferrer">HED Unity <span class="link-icon">↗</span></a></h3>
             <p>
               Premium iOS companion app for HED Unity headphones — hardware pairing, audio EQ,
               and firmware update management.
@@ -323,30 +356,35 @@
         </div>
       </div>
 
-      <!-- Red Bull Radar -->
+      <!-- Red Bull Radar & Co-Pilot -->
       <div class="flip-card" id="card-redbull">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/redbull.png" alt="Red Bull app preview" loading="lazy">
+            </div>
             <div class="card-tag">Lead Engineer · ISBX</div>
             <h3><a href="https://www.isbx.com/work/red-bull" target="_blank" rel="noopener noreferrer">Red Bull
-                Radar</a></h3>
+                <span class="link-icon">↗</span></a></h3>
             <p>
-              Consumer-facing mobile platform for Red Bull's branded events, athlete content,
-              and real-time engagement campaigns.
+              Engineered two Red Bull platforms — Radar (2019), a native Swift iOS inventory tracker for
+              Red Bull coolers &amp; equipment, and Co-Pilot (2020), an internal iOS tool for Red Bull event management.
             </p>
             <span class="flip-hint">Tap to see tech stack →</span>
           </div>
           <div class="flip-card-back">
             <div class="card-back-title">What I Built</div>
             <ul class="contributions">
-              <li>Cross-platform mobile app (iOS &amp; Android)</li>
-              <li>Real-time event &amp; location-aware content feeds</li>
-              <li>Push notification campaign integration</li>
-              <li>Analytics &amp; engagement tracking</li>
+              <li>Radar: native Swift iOS app for tracking Red Bull cooler &amp; equipment inventory</li>
+              <li>Real-time location tracking, offline caching with RealmSwift &amp; RxSwift</li>
+              <li>Co-Pilot: internal iOS event management tool (MVVM, RxSwift, RealmSwift)</li>
+              <li>AWS Cognito auth, GraphQL/AppSync, Applozic in-app chat</li>
+              <li>Firebase push notifications, Crashlytics, Jenkins CI/CD</li>
             </ul>
             <div class="tech-tags">
-              <span>React Native</span><span>TypeScript</span><span>Firebase</span>
-              <span>Push Notifications</span><span>Analytics</span>
+              <span>Swift</span><span>RxSwift</span><span>RealmSwift</span>
+              <span>AWS Cognito</span><span>GraphQL</span><span>Firebase</span>
+              <span>Sencha Touch</span><span>Cordova</span><span>Node.js</span>
             </div>
           </div>
         </div>
@@ -356,8 +394,11 @@
       <div class="flip-card" id="card-ojo">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/ojo.png" alt="OjO Electric app preview" loading="lazy">
+            </div>
             <div class="card-tag">Lead Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com/work/ojo" target="_blank" rel="noopener noreferrer">OjO Electric</a></h3>
+            <h3><a href="https://www.isbx.com/work/ojo" target="_blank" rel="noopener noreferrer">OjO Electric <span class="link-icon">↗</span></a></h3>
             <p>
               Electric scooter rental platform — featured in Forbes for its stability tech.
               Full mobile experience with IoT backend integrations.
@@ -384,9 +425,12 @@
       <div class="flip-card" id="card-vurple">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/vurple.png" alt="Vurple app preview" loading="lazy">
+            </div>
             <div class="card-tag">Lead Engineer · ISBX</div>
             <h3><a href="https://pitchbook.com/profiles/company/484176-25#overview" target="_blank"
-                rel="noopener noreferrer">Vurple</a></h3>
+                rel="noopener noreferrer">Vurple <span class="link-icon">↗</span></a></h3>
             <p>
               Livestreaming civic engagement platform for real-time interaction between
               public officials and their communities.
@@ -413,9 +457,12 @@
       <div class="flip-card" id="card-beats">
         <div class="flip-card-inner">
           <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/beats.png" alt="Apple Beats app preview" loading="lazy">
+            </div>
             <div class="card-tag">iOS Engineer · ISBX</div>
             <h3><a href="https://www.isbx.com/work/apple-beats" target="_blank" rel="noopener noreferrer">Apple (Beats
-                by Dre)</a></h3>
+                by Dre) <span class="link-icon">↗</span></a></h3>
             <p>
               Official companion iOS application for the Beats Pill+ speaker line. Enabled users to control,
               manage, and sync multiple hardware speakers.
@@ -453,6 +500,13 @@
           Ticketmaster and StubHub.</li>
         <li><strong>FileKeepers:</strong> Secure enterprise document management and tracking.</li>
       </ul>
+    </div>
+
+    <div class="archive-link-wrapper">
+      <a href="archive.html" class="archive-link" id="view-archive-btn">
+        View Full Project Archive
+        <span class="archive-arrow">→</span>
+      </a>
     </div>
   </section>
 
