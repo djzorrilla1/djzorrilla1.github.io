@@ -49,11 +49,21 @@ if (canvas) {
 
 // ─── Project card Flip effect ──────────────────────────────────────────────
 document.querySelectorAll('.flip-card').forEach(card => {
-  card.addEventListener('click', () => {
-    // Optional: close other cards when one is opened
-    // document.querySelectorAll('.flip-card').forEach(c => {
-    //   if (c !== card) c.classList.remove('flipped');
-    // });
+  card.addEventListener('click', (e) => {
+    // On mobile (≤768px), prevent links from navigating — let the card expand instead
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      // If user tapped a link and the card is already flipped/expanded, allow navigation
+      const clickedLink = e.target.closest('a');
+      if (clickedLink && card.classList.contains('flipped')) {
+        return; // let the link navigate normally
+      }
+      // Otherwise block link navigation and toggle the card
+      if (clickedLink) {
+        e.preventDefault();
+      }
+    }
     
     card.classList.toggle('flipped');
   });

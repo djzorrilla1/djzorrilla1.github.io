@@ -374,12 +374,13 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
+  overflow: visible;
 }
 
 /* ─── Flip Card ──────────────────────────────────────── */
 .flip-card {
   perspective: 1200px;
-  height: 420px;
+  height: 480px;
   cursor: pointer;
 }
 
@@ -415,6 +416,7 @@ section {
   display: flex;
   flex-direction: column;
   transition: border-color 0.3s ease;
+  overflow: hidden;
 }
 
 .flip-card:hover .flip-card-front,
@@ -576,6 +578,79 @@ section {
 
 .notable-list strong {
   color: #fff;
+  font-weight: 600;
+}
+
+/* ─── Education & Certifications ─────────────────────── */
+.education-section {
+  border-top: 1px solid var(--border);
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.education-card {
+  padding: 28px 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  transition: border-color 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: rgba(0, 212, 170, 0.35);
+}
+
+.education-card .edu-icon {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.education-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.education-card .edu-school {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.education-card .edu-detail {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.education-card .edu-year {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 8px;
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-pill);
+}
+
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 4px 14px;
+  background: rgba(0, 212, 170, 0.08);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -761,13 +836,63 @@ section {
     justify-content: space-between;
   }
 
+  /* ── Mobile flip-card fixes ── */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .flip-card,
   .flip-card.featured {
     grid-column: span 1;
+    height: 520px;
   }
 
-  .flip-card-inner {
-    height: 100%;
+  .flip-card-front {
+    padding: 24px;
+  }
+
+  .flip-card-front h3 {
+    font-size: 1.3rem;
+  }
+
+  .flip-card-front > p {
+    font-size: 0.88rem;
+  }
+
+  .flip-card-back {
+    padding: 24px;
+  }
+
+  .contributions {
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  .contributions li {
+    font-size: 0.82rem;
+  }
+
+  .tech-tags span {
+    font-size: 0.68rem;
+    padding: 4px 10px;
+  }
+
+  .flip-hint {
+    font-size: 0.72rem;
+  }
+
+  .notable-work {
+    padding: 24px 20px;
+  }
+
+  .notable-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -804,5 +929,14 @@ section {
 
   .stat-number {
     font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    text-align: center;
   }
 }
