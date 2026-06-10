@@ -29,10 +29,10 @@
       <div class="logo">DZ</div>
 
       <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
         <a href="Darryl%20Zorrilla%20Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         <a href="#contact">Contact</a>
         <a href="mailto:djzorrilla@yahoo.com" class="nav-cta" id="nav-cta-btn">Hire Me</a>
@@ -87,15 +87,73 @@
     </div>
   </header>
 
+  <!-- ─── ABOUT ────────────────────────────────────────── -->
+  <section class="about-section" id="about">
+    <div class="section-header reveal">
+      <p class="section-label">ABOUT ME</p>
+      <h2>The Engineer Behind the Work</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="about-avatar">
+          <img src="images/djzorrilla.jpeg" alt="Darryl Zorrilla">
+        </div>
+        <p>
+          I'm Darryl — a full-stack and mobile engineer based in Los Angeles.
+          I've spent 15+ years going from freelance web work to leading engineering on production apps
+          used by real people every day. Most of that time has been at ISBX, where I've grown from
+          building native iOS apps to architecting entire product platforms.
+        </p>
+        <p>
+          I specialize in the layer where mobile, real-time systems, and backend infrastructure meet.
+          That's not a common combination — most engineers live on one side or the other. I'm comfortable
+          owning a Native iOS app, or React Native app, the NestJS API it talks to, the AWS infra it runs on, and the
+          Terraform config that deploys it.
+        </p>
+        <p>
+          What makes me different is that I've done this across wildly different domains: IoT and Bluetooth
+          hardware, live event management, sports platforms, social discovery, electric
+          vehicles. The domain always changes. The discipline of shipping clean, maintainable,
+          production-ready software doesn't.
+        </p>
+      </div>
+
+      <div class="about-sidebar reveal reveal--slide-right">
+        <div class="about-card">
+          <span class="about-card-label">Currently Based</span>
+          <span class="about-card-value">Los Angeles, CA</span>
+        </div>
+        <div class="about-card">
+          <span class="about-card-label">Open To</span>
+          <span class="about-card-value">Remote · Hybrid · On-site (LA)</span>
+        </div>
+        <div class="about-card">
+          <span class="about-card-label">Specialties</span>
+          <span class="about-card-value">Real-time systems · Mobile architecture · Full-stack product</span>
+        </div>
+        <div class="about-card">
+          <span class="about-card-label">Rare Combo</span>
+          <span class="about-card-value">Native iOS + React Native + NestJS + AWS + Terraform — all production</span>
+        </div>
+        <div class="about-card">
+          <span class="about-card-label">When I'm Not Coding</span>
+          <span class="about-card-value">Pickleball · Snowboarding · Camping · Hiking · Climbing · Tennis · Basketball ·
+            Watching NBA · NFL · F1</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── SKILLS ───────────────────────────────────────── -->
   <section class="skills-section" id="skills">
-    <div class="section-header">
+    <div class="section-header reveal">
       <p class="section-label">CORE STACK</p>
       <h2>Skills &amp; Technologies</h2>
     </div>
 
-    <div class="skills-categories">
-      <div class="skill-group">
+    <div class="skills-categories reveal-group">
+      <div class="skill-group reveal">
         <p class="skill-group-label">Languages</p>
         <div class="skills-grid">
           <span>TypeScript</span>
@@ -109,7 +167,7 @@
           <span>HTML / CSS</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <p class="skill-group-label">Frameworks & Libraries</p>
         <div class="skills-grid">
           <span>React Native</span>
@@ -129,7 +187,7 @@
           <span>Sencha Touch / Cordova</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <p class="skill-group-label">Cloud & Infra</p>
         <div class="skills-grid">
           <span>AWS (S3, EC2, CloudFront)</span>
@@ -143,7 +201,7 @@
           <span>CI / CD Pipelines</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <p class="skill-group-label">Databases</p>
         <div class="skills-grid">
           <span>PostgreSQL</span>
@@ -155,7 +213,7 @@
           <span>Database Design</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <p class="skill-group-label">Integrations</p>
         <div class="skills-grid">
           <span>Stripe</span>
@@ -171,7 +229,7 @@
           <span>Spotify</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group reveal">
         <p class="skill-group-label">DevOps & Tooling</p>
         <div class="skills-grid">
           <span>Fastlane</span>
@@ -188,16 +246,16 @@
 
   <!-- ─── PROJECTS ─────────────────────────────────────── -->
   <section class="projects-section" id="projects">
-    <div class="section-header">
+    <div class="section-header reveal">
       <p class="section-label">FEATURED WORK</p>
       <h2>Selected Projects</h2>
       <p class="section-subtitle">Tap a card to see what I built and the tech behind it.</p>
     </div>
 
-    <div class="project-grid">
+    <div class="project-grid reveal-group">
 
       <!-- Schoolyard -->
-      <div class="flip-card featured" id="card-schoolyard">
+      <div class="flip-card featured reveal" id="card-schoolyard">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
@@ -231,14 +289,15 @@
       </div>
 
       <!-- CYNQ -->
-      <div class="flip-card" id="card-cynq">
+      <div class="flip-card reveal" id="card-cynq">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
               <img src="images/cynq.png" alt="CYNQ app preview" loading="lazy">
             </div>
             <div class="card-tag">Senior Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">CYNQ <span class="link-icon">↗</span></a></h3>
+            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">CYNQ <span
+                  class="link-icon">↗</span></a></h3>
             <p>
               Social discovery app for movies, opinions, and shared activities — helping friends find
               what to watch and do together.
@@ -264,14 +323,15 @@
       </div>
 
       <!-- FriendlyBet -->
-      <div class="flip-card" id="card-friendlybet">
+      <div class="flip-card reveal" id="card-friendlybet">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
               <img src="images/friendlybet.png" alt="FriendlyBet app preview" loading="lazy">
             </div>
             <div class="card-tag">Lead Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">FriendlyBet <span class="link-icon">↗</span></a></h3>
+            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">FriendlyBet <span
+                  class="link-icon">↗</span></a></h3>
             <p>
               Social wagering platform for creating, managing, and settling friendly bets with real-time
               reactions, comments, and bet tracking.
@@ -295,14 +355,15 @@
       </div>
 
       <!-- SoundFi -->
-      <div class="flip-card" id="card-soundfi">
+      <div class="flip-card reveal" id="card-soundfi">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
               <img src="images/soundfi.png" alt="SoundFi app preview" loading="lazy">
             </div>
             <div class="card-tag">Senior Mobile &amp; API Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com/work/sound-fi" target="_blank" rel="noopener noreferrer">SoundFi <span class="link-icon">↗</span></a></h3>
+            <h3><a href="https://www.isbx.com/work/sound-fi" target="_blank" rel="noopener noreferrer">SoundFi <span
+                  class="link-icon">↗</span></a></h3>
             <p>
               Immersive 3D spatial audio experience for movie theaters — synchronized audio playback
               through personal headphones.
@@ -326,14 +387,15 @@
       </div>
 
       <!-- HED Unity -->
-      <div class="flip-card" id="card-hed">
+      <div class="flip-card reveal" id="card-hed">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
               <img src="images/hed_unity.png" alt="HED Unity app preview" loading="lazy">
             </div>
             <div class="card-tag">iOS Engineer · ISBX</div>
-            <h3><a href="https://getunity.com" target="_blank" rel="noopener noreferrer">HED Unity <span class="link-icon">↗</span></a></h3>
+            <h3><a href="https://getunity.com" target="_blank" rel="noopener noreferrer">HED Unity <span
+                  class="link-icon">↗</span></a></h3>
             <p>
               Premium iOS companion app for HED Unity headphones — hardware pairing, audio EQ,
               and firmware update management.
@@ -357,7 +419,7 @@
       </div>
 
       <!-- Red Bull Radar & Co-Pilot -->
-      <div class="flip-card" id="card-redbull">
+      <div class="flip-card reveal" id="card-redbull">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
@@ -391,14 +453,15 @@
       </div>
 
       <!-- OjO Electric -->
-      <div class="flip-card" id="card-ojo">
+      <div class="flip-card reveal" id="card-ojo">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
               <img src="images/ojo.png" alt="OjO Electric app preview" loading="lazy">
             </div>
             <div class="card-tag">Lead Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com/work/ojo" target="_blank" rel="noopener noreferrer">OjO Electric <span class="link-icon">↗</span></a></h3>
+            <h3><a href="https://www.isbx.com/work/ojo" target="_blank" rel="noopener noreferrer">OjO Electric <span
+                  class="link-icon">↗</span></a></h3>
             <p>
               Electric scooter rental platform — featured in Forbes for its stability tech.
               Full mobile experience with IoT backend integrations.
@@ -422,7 +485,7 @@
       </div>
 
       <!-- Vurple -->
-      <div class="flip-card" id="card-vurple">
+      <div class="flip-card reveal" id="card-vurple">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
@@ -454,7 +517,7 @@
       </div>
 
       <!-- Apple Beats -->
-      <div class="flip-card" id="card-beats">
+      <div class="flip-card reveal" id="card-beats">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
@@ -487,7 +550,7 @@
 
     </div>
 
-    <div class="notable-work">
+    <div class="notable-work reveal">
       <h3>Other Notable Apps Shipped</h3>
       <ul class="notable-list">
         <li><strong>Linktune:</strong> Universal music discovery app combining Spotify, Apple Music, and SoundCloud.
@@ -502,7 +565,7 @@
       </ul>
     </div>
 
-    <div class="archive-link-wrapper">
+    <div class="archive-link-wrapper reveal">
       <a href="archive.html" class="archive-link" id="view-archive-btn">
         View Full Project Archive
         <span class="archive-arrow">→</span>
@@ -512,14 +575,14 @@
 
   <!-- ─── EXPERIENCE ────────────────────────────────────── -->
   <section class="timeline-section" id="experience">
-    <div class="section-header">
+    <div class="section-header reveal">
       <p class="section-label">CAREER TIMELINE</p>
       <h2>Professional Journey</h2>
     </div>
 
-    <div class="timeline">
+    <div class="timeline reveal-group">
 
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="timeline-left">
           <span class="timeline-year">2023–Now</span>
           <div class="timeline-dot"></div>
@@ -532,7 +595,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="timeline-left">
           <span class="timeline-year">2018–2023</span>
           <div class="timeline-dot"></div>
@@ -546,7 +609,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="timeline-left">
           <span class="timeline-year">2014–2018</span>
           <div class="timeline-dot"></div>
@@ -559,7 +622,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
         <div class="timeline-left">
           <span class="timeline-year">2010–2013</span>
           <div class="timeline-dot"></div>
@@ -575,36 +638,50 @@
     </div>
   </section>
 
-  <!-- ─── CONTACT ───────────────────────────────────────── -->
-  <section class="contact-section" id="contact">
-    <div class="section-header">
-      <p class="section-label">CONTACT</p>
-      <h2>Let's Build Something</h2>
+  <!-- ─── NOW BUILDING ────────────────────────────────── -->
+  <section class="now-building-section" id="now-building">
+    <div class="section-header reveal">
+      <p class="section-label">WHAT'S NEXT</p>
+      <h2>Now Building &amp; Exploring</h2>
+      <p class="section-subtitle">Side explorations and technical directions I'm actively invested in.</p>
     </div>
 
-    <p class="contact-text">
-      Open to senior engineering roles, founding engineer positions, and high-impact
-      startup collaborations. Let's talk.
-    </p>
-
-    <div class="contact-links">
-      <a href="Darryl%20Zorrilla%20Resume.pdf" target="_blank" rel="noopener noreferrer"
-        id="contact-resume">Resume ↓</a>
-      <a href="https://www.linkedin.com/in/djzorrilla" target="_blank" rel="noopener noreferrer"
-        id="contact-linkedin">LinkedIn ↗</a>
-      <a href="mailto:djzorrilla@yahoo.com" id="contact-email">djzorrilla@yahoo.com</a>
+    <div class="now-grid reveal-group">
+      <div class="now-card reveal">
+        <span class="now-emoji">📡</span>
+        <h4>BLE Mesh Networking</h4>
+        <p>Low-power Bluetooth mesh topologies for peer-to-peer device coordination without infrastructure dependency.
+        </p>
+      </div>
+      <div class="now-card reveal">
+        <span class="now-emoji">🎪</span>
+        <h4>Festival Proximity Systems</h4>
+        <p>Radar-style real-time presence for large venues — letting attendees discover who and what is nearby without a
+          server in the loop.</p>
+      </div>
+      <div class="now-card reveal">
+        <span class="now-emoji">🎮</span>
+        <h4>Real-Time Multiplayer</h4>
+        <p>Lightweight WebSocket and gRPC patterns for turn-based and synchronous multiplayer at consumer scale.</p>
+      </div>
+      <div class="now-card reveal">
+        <span class="now-emoji">🤖</span>
+        <h4>AI-Assisted Mobile Workflows</h4>
+        <p>Integrating on-device and API-backed AI into React Native apps — smart form completion, context-aware UX
+          flows.</p>
+      </div>
     </div>
   </section>
 
   <!-- ─── EDUCATION & CERTIFICATIONS ────────────────────── -->
   <section class="education-section" id="education">
-    <div class="section-header">
+    <div class="section-header reveal">
       <p class="section-label">BACKGROUND</p>
       <h2>Education &amp; Certifications</h2>
     </div>
 
-    <div class="education-grid">
-      <div class="education-card">
+    <div class="education-grid reveal-group">
+      <div class="education-card reveal">
         <span class="edu-icon">🎓</span>
         <h4>Bachelor's Degree</h4>
         <p class="edu-school">George Mason University</p>
@@ -612,7 +689,7 @@
         <span class="edu-year">2010 – 2012</span>
       </div>
 
-      <div class="education-card">
+      <div class="education-card reveal">
         <span class="edu-icon">📘</span>
         <h4>Associate's Degree</h4>
         <p class="edu-school">Northern Virginia Community College</p>
@@ -620,7 +697,7 @@
         <span class="edu-year">2008 – 2010</span>
       </div>
 
-      <div class="education-card">
+      <div class="education-card reveal">
         <span class="edu-icon">🏅</span>
         <h4>Certified ScrumMaster (CSM)</h4>
         <p class="edu-school">Scrum Alliance</p>
@@ -628,6 +705,51 @@
         <span class="edu-year">Issued Jan 2018</span>
         <div class="cert-badge">✓ Verified Credential</div>
       </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="reveal">
+        <p class="section-label">LET'S TALK</p>
+        <h2 class="contact-heading">Ready to Build Something Real</h2>
+        <p class="contact-availability">
+          Open to new roles and collaborations — senior engineering, founding engineer, and high-impact startup work.
+        </p>
+      </div>
+
+      <div class="contact-roles reveal">
+        <p class="contact-roles-label">Open to</p>
+        <div class="contact-role-tags">
+          <span>Lead Engineer</span>
+          <span>Founding Engineer</span>
+          <span>Mobile Architecture</span>
+          <span>Full-Stack Product</span>
+        </div>
+      </div>
+
+      <div class="contact-actions reveal">
+        <a href="mailto:djzorrilla@yahoo.com" class="contact-btn contact-btn--primary" id="contact-email">
+          Email Me ↗
+        </a>
+        <a href="https://www.linkedin.com/in/djzorrilla" target="_blank" rel="noopener noreferrer" class="contact-btn"
+          id="contact-linkedin">
+          LinkedIn ↗
+        </a>
+        <a href="https://github.com/djzorrilla" target="_blank" rel="noopener noreferrer" class="contact-btn"
+          id="contact-github">
+          GitHub ↗
+        </a>
+        <a href="Darryl%20Zorrilla%20Resume.pdf" target="_blank" rel="noopener noreferrer" class="contact-btn"
+          id="contact-resume">
+          Resume ↓
+        </a>
+      </div>
+
+      <p class="contact-footer-note reveal">
+        Darryl Zorrilla &nbsp;·&nbsp; Los Angeles, CA &nbsp;·&nbsp; djzorrilla@yahoo.com
+      </p>
     </div>
   </section>
 
