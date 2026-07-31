@@ -187,6 +187,7 @@
           <span>AVFoundation</span>
           <span>gRPC / Protobuf</span>
           <span>WebSockets</span>
+          <span>Leaflet</span>
           <span>Sencha Touch / Cordova</span>
         </div>
       </div>
@@ -201,6 +202,8 @@
           <span>Docker</span>
           <span>Terraform</span>
           <span>Firebase</span>
+          <span>Google Cloud (GCE)</span>
+          <span>Cloudflare Pages / R2</span>
           <span>CI / CD Pipelines</span>
         </div>
       </div>
@@ -210,6 +213,7 @@
           <span>PostgreSQL</span>
           <span>MySQL</span>
           <span>DynamoDB</span>
+          <span>SQLite</span>
           <span>Redis</span>
           <span>Realm</span>
           <span>TypeORM</span>
@@ -227,6 +231,8 @@
           <span>WatchKit / watchOS</span>
           <span>Google Maps</span>
           <span>Apple Maps</span>
+          <span>Google Gemini API</span>
+          <span>Google Places API</span>
           <span>MQTT / IoT</span>
           <span>Applozic</span>
           <span>SendGrid</span>
@@ -258,8 +264,44 @@
 
     <div class="project-grid reveal-group">
 
+      <!-- Feed Me -->
+      <div class="flip-card featured reveal" id="card-feedme">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-image">
+              <img src="images/feedme.png" alt="Feed Me app preview" loading="lazy">
+            </div>
+            <div class="card-tag">Latest · AI-Powered · Solo Build — Product, Design &amp; Engineering</div>
+            <h3><a href="https://feedme-8hx.pages.dev" target="_blank" rel="noopener noreferrer">Feed Me <span
+                  class="link-icon">↗</span></a></h3>
+            <p>
+              Paste a TikTok, Reel, or YouTube link and multimodal AI watches the video for you — pulling out every
+              food spot it mentions and the dishes it recommended, then mapping them into lists you can save, share,
+              and collaborate on.
+            </p>
+            <span class="flip-hint">Tap to see tech stack →</span>
+          </div>
+          <div class="flip-card-back">
+            <div class="card-back-title">What I Built</div>
+            <ul class="contributions">
+              <li>Multimodal AI pipeline reading video, audio &amp; on-screen text into structured spots + dish
+                callouts</li>
+              <li>yt-dlp fetch + Google Places resolution behind a food-venue gate</li>
+              <li>Live import feed over WebSockets; Leaflet map with open-now &amp; distance filters</li>
+              <li>Shareable collections with roles, live sync &amp; a spin wheel</li>
+              <li>NestJS + SQLite API on GCP, R2 uploads, Firebase auth — solo, AI-assisted monorepo</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Google Gemini</span><span>React</span><span>TypeScript</span><span>NestJS</span>
+              <span>SQLite</span><span>WebSockets</span><span>Leaflet</span>
+              <span>Firebase</span><span>Cloudflare</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Schoolyard -->
-      <div class="flip-card featured reveal" id="card-schoolyard">
+      <div class="flip-card reveal" id="card-schoolyard">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="card-image">
@@ -321,38 +363,6 @@
               <span>React Native</span><span>Expo</span><span>watchOS</span><span>SwiftUI</span>
               <span>WatchConnectivity</span><span>CoreMotion</span><span>NestJS</span>
               <span>TypeScript</span><span>HealthKit</span><span>AWS</span><span>Terraform</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FriendlyBet -->
-      <div class="flip-card reveal" id="card-friendlybet">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <div class="card-image">
-              <img src="images/friendlybet.png" alt="FriendlyBet app preview" loading="lazy">
-            </div>
-            <div class="card-tag">Lead Engineer · ISBX</div>
-            <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">FriendlyBet <span
-                  class="link-icon">↗</span></a></h3>
-            <p>
-              Social wagering platform for creating, managing, and settling friendly bets with real-time
-              reactions, comments, and bet tracking.
-            </p>
-            <span class="flip-hint">Tap to see tech stack →</span>
-          </div>
-          <div class="flip-card-back">
-            <div class="card-back-title">What I Built</div>
-            <ul class="contributions">
-              <li>End-to-end bet lifecycle management system</li>
-              <li>Real-time social feed with reactions &amp; comments</li>
-              <li>React Native cross-platform mobile app</li>
-              <li>NestJS backend with AWS RDS &amp; Terraform infra</li>
-            </ul>
-            <div class="tech-tags">
-              <span>React Native</span><span>NestJS</span><span>TypeScript</span>
-              <span>PostgreSQL</span><span>Firebase</span><span>AWS</span><span>Terraform</span>
             </div>
           </div>
         </div>
@@ -557,6 +567,8 @@
     <div class="notable-work reveal">
       <h3>Other Notable Apps Shipped</h3>
       <ul class="notable-list">
+        <li><strong>FriendlyBet:</strong> Social wagering platform for creating, managing, and settling friendly bets
+          with a real-time feed.</li>
         <li><strong>Linktune:</strong> Universal music discovery app combining Spotify, Apple Music, and SoundCloud.
         </li>
         <li><strong>Guard Grabber:</strong> On-demand security and personal protection service platform.</li>
@@ -670,9 +682,9 @@
       </div>
       <div class="now-card reveal">
         <span class="now-emoji">🤖</span>
-        <h4>AI-Assisted Mobile Workflows</h4>
-        <p>Integrating on-device and API-backed AI into React Native apps — smart form completion, context-aware UX
-          flows.</p>
+        <h4>AI-Powered Product Features</h4>
+        <p>Multimodal LLM pipelines in production — turning video, audio, and on-screen text into structured data
+          (shipped in Feed Me) — plus AI-assisted development workflows end to end.</p>
       </div>
     </div>
   </section>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Darryl Zorrilla — Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        @page {
+            margin: 0.45in 0.55in;
+            size: letter;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #2d2d2d;
+            line-height: 1.45;
+            font-size: 9.5px;
+            -webkit-font-smoothing: antialiased;
+            padding: 0.45in 0.55in;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            text-align: center;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #111;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .header .subtitle {
+            font-size: 11.5px;
+            font-weight: 500;
+            color: #444;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .contact-row {
+            font-size: 9.5px;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .contact-row span {
+            color: #bbb;
+        }
+
+        .contact-row a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        /* ── SECTION HEADERS ── */
+        .section-title {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #111;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+            margin-top: 14px;
+            margin-bottom: 8px;
+        }
+
+        /* ── SUMMARY ── */
+        .summary {
+            font-size: 9.5px;
+            color: #333;
+            line-height: 1.55;
+            margin-bottom: 2px;
+        }
+
+        /* ── EXPERIENCE ── */
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .role-header h3 {
+            font-size: 11px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .role-header .dates {
+            font-size: 9px;
+            font-weight: 500;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .role-title {
+            font-size: 9.5px;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 4px;
+            font-style: italic;
+        }
+
+        .role-bullets {
+            padding-left: 16px;
+            margin-bottom: 10px;
+        }
+
+        .role-bullets li {
+            margin-bottom: 2.5px;
+            font-size: 9.5px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .role-bullets li strong {
+            font-weight: 600;
+            color: #222;
+        }
+
+        /* ── PROJECTS GRID ── */
+        .projects-container {
+            margin-bottom: 4px;
+        }
+
+        .project-group {
+            margin-bottom: 8px;
+        }
+
+        .project-group-label {
+            font-size: 8.5px;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .project-item {
+            margin-bottom: 6px;
+            padding-left: 0;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .project-header .project-name {
+            font-size: 10px;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .project-header .project-role {
+            font-size: 8.5px;
+            font-weight: 500;
+            color: #777;
+            margin-left: 6px;
+        }
+
+        .project-header .project-dates {
+            font-size: 8.5px;
+            color: #888;
+            white-space: nowrap;
+        }
+
+        .project-tech {
+            font-size: 8.5px;
+            color: #666;
+            margin-top: 1px;
+            font-style: italic;
+        }
+
+        .project-desc {
+            font-size: 9px;
+            color: #333;
+            margin-top: 2px;
+            line-height: 1.5;
+            padding-left: 0;
+        }
+
+        .project-desc li {
+            margin-bottom: 1.5px;
+            list-style: disc;
+            margin-left: 14px;
+        }
+
+        /* ── ADDITIONAL PROJECTS ── */
+        .additional-projects {
+            font-size: 9px;
+            color: #444;
+            line-height: 1.6;
+            margin-top: 6px;
+        }
+
+        .additional-projects strong {
+            color: #222;
+            font-weight: 600;
+        }
+
+        /* ── SKILLS ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            row-gap: 3px;
+            column-gap: 8px;
+            font-size: 9px;
+        }
+
+        .skills-grid .skill-label {
+            font-weight: 600;
+            color: #333;
+            text-align: right;
+        }
+
+        .skills-grid .skill-value {
+            color: #444;
+        }
+
+        /* ── EDUCATION ── */
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .edu-item h4 {
+            font-size: 10px;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 1px;
+        }
+
+        .edu-item .edu-detail {
+            font-size: 9px;
+            color: #444;
+            font-style: italic;
+        }
+
+        .edu-item .edu-year {
+            font-size: 8.5px;
+            color: #888;
+        }
+
+        .cert-item {
+            margin-top: 6px;
+        }
+
+        .cert-item h4 {
+            font-size: 10px;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 1px;
+        }
+
+        .cert-item .cert-detail {
+            font-size: 9px;
+            color: #444;
+        }
+
+        /* ── PAGE BREAK ── */
+        .page-break {
+            page-break-before: always;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+            }
+            .section-title {
+                page-break-after: avoid;
+            }
+            .project-item, .role-header {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <div class="header">
+        <h1>Darryl Zorrilla</h1>
+        <div class="subtitle">Senior Full-Stack &amp; Mobile Engineer</div>
+        <div class="contact-row">
+            Los Angeles, CA
+            <span>·</span>
+            <a href="mailto:djzorrilla@yahoo.com">djzorrilla@yahoo.com</a>
+        </div>
+    </div>
+
+    <!-- ═══════════════ SUMMARY ═══════════════ -->
+    <div class="section-title">Summary</div>
+    <div class="summary">
+        Full-stack engineer with 12+ years of professional experience and 15+ shipped production applications. Specialize in architecting end-to-end consumer products — from native iOS and React Native mobile apps to NestJS APIs, real-time systems, and AWS cloud infrastructure. Career spent at ISBX, progressing from iOS developer to lead engineer, owning entire product lifecycles for clients including <strong>Apple (Beats by Dre)</strong>, <strong>Red Bull</strong>, and <strong>OjO Electric</strong> (featured in Forbes). Proven ability to take a product from zero to App Store with full backend, CMS, and infrastructure.
+    </div>
+
+    <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+    <div class="section-title">Professional Experience</div>
+
+    <!-- Role 1: Current -->
+    <div class="role-header">
+        <h3>ISBX — Lead Full-Stack Engineer</h3>
+        <div class="dates">2023 – Present</div>
+    </div>
+    <div class="role-title">Promoted to lead full-stack engineering across mobile, API, and infrastructure.</div>
+    <ul class="role-bullets">
+        <li>Architect and deliver <strong>3 greenfield products simultaneously</strong> (Schoolyard Social, CYNQ, FriendlyBet), each with a React Native app, NestJS API, React CMS, and Terraform-managed AWS infrastructure.</li>
+        <li>Designed a <strong>real-time tournament bracket engine</strong> with WebSocket-driven leaderboards serving live event data to thousands of concurrent users for Schoolyard Social.</li>
+        <li>Built end-to-end <strong>Stripe payment and subscription billing</strong> systems across multiple products, handling recurring revenue, refunds, and webhook event processing.</li>
+        <li>Established <strong>monorepo architecture patterns</strong> and CI/CD pipelines that reduced deployment time and enabled shared code across mobile, web, and API packages.</li>
+        <li>Define technical roadmaps, lead sprint planning, conduct code reviews, and mentor a team of 3–5 engineers.</li>
+    </ul>
+
+    <!-- Role 2 -->
+    <div class="role-header">
+        <h3>ISBX — Senior Mobile Engineer &amp; Architect</h3>
+        <div class="dates">2018 – 2023</div>
+    </div>
+    <div class="role-title">Led mobile development for enterprise clients, expanded into full-stack backend ownership.</div>
+    <ul class="role-bullets">
+        <li>Delivered <strong>8+ production mobile apps</strong> for clients including Red Bull, OjO Electric, HED, SoundFi, and Vurple — from architecture through App Store / Google Play deployment.</li>
+        <li>Engineered the <strong>OjO Electric iOS app</strong> with IoT scooter telemetry, GPS fleet tracking, and Stripe billing for an electric scooter rental service featured in Forbes.</li>
+        <li>Built the <strong>Red Bull Radar</strong> mobile platform, delivering location-aware content feeds and real-time push notification campaigns for branded events and athlete content.</li>
+        <li>Developed the <strong>HED Unity</strong> native iOS app integrating CoreBluetooth BLE pairing, real-time DSP audio EQ, and over-the-air firmware updates for premium headphones.</li>
+        <li>Created <strong>Vurple</strong>, a civic engagement livestreaming platform with WebRTC video, real-time Q&amp;A, and audience polling for elected officials.</li>
+    </ul>
+
+    <!-- Role 3 -->
+    <div class="role-header">
+        <h3>ISBX — iOS &amp; Mobile Engineer</h3>
+        <div class="dates">2014 – 2018</div>
+    </div>
+    <div class="role-title">Foundation years building native iOS apps and backend APIs.</div>
+    <ul class="role-bullets">
+        <li>Developed the official <strong>Apple (Beats by Dre) Beats Pill+</strong> companion iOS app — Bluetooth LE device discovery, multi-speaker sync (DJ &amp; Stereo modes), and hardware state management.</li>
+        <li>Built <strong>SoundFi</strong>, an immersive 3D spatial audio app for movie theaters, handling audio session management, headphone routing, and synchronized playback.</li>
+        <li>Architected <strong>Linktune</strong>, a universal music streaming app integrating Spotify, Apple Music, and SoundCloud APIs with a custom Node.js backend.</li>
+        <li>Led development of <strong>Ribbon</strong>, a long-running event ticketing platform encompassing native iOS, React CMS, API services, and mobile applications.</li>
+    </ul>
+
+    <!-- Role 4 -->
+    <div class="role-header">
+        <h3>Freelance Web Developer &amp; Designer</h3>
+        <div class="dates">2010 – 2013</div>
+    </div>
+    <div class="role-title">Independent — Designed and built custom websites for local businesses.</div>
+    <ul class="role-bullets">
+        <li>Delivered full-stack web solutions for small business clients, establishing core skills in HTML/CSS/JS, UX design, and client communication.</li>
+    </ul>
+
+    <!-- ═══════════════ ADDITIONAL PROJECTS ═══════════════ -->
+    <div class="section-title">Additional Projects</div>
+    <div class="additional-projects">
+        <strong>Inventoryy</strong> — B2B inventory management platform with real-time WebSocket sync for high-volume sellers
+        <span style="color:#aaa">·</span>
+        <strong>Odeon</strong> — Native iOS app + Next.js web platform with custom database architecture
+        <span style="color:#aaa">·</span>
+        <strong>GuardGrabber</strong> — On-demand security services marketplace (React, Next.js, NestJS)
+        <span style="color:#aaa">·</span>
+        <strong>File Keepers</strong> — Document management app for enterprise shredding/storage services
+        <span style="color:#aaa">·</span>
+        <strong>Pikkup</strong> — On-demand delivery and moving platform with iOS and web apps
+    </div>
+
+    <!-- ═══════════════ TECHNICAL SKILLS ═══════════════ -->
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+        <div class="skill-label">Languages</div>
+        <div class="skill-value">TypeScript, JavaScript, Swift, SwiftUI, Objective-C, Python, GraphQL, HTML/CSS</div>
+
+        <div class="skill-label">Frameworks</div>
+        <div class="skill-value">React, React Native, Expo, Next.js, NestJS, Node.js, Loopback, gRPC, WebSockets, WebRTC</div>
+
+        <div class="skill-label">Cloud &amp; Infra</div>
+        <div class="skill-value">AWS (S3, CloudFront, EC2, Lambda), Terraform, Docker, Firebase, Serverless, CI/CD Pipelines</div>
+
+        <div class="skill-label">Databases</div>
+        <div class="skill-value">PostgreSQL, MySQL, Redis, TypeORM, Database Design &amp; Optimization</div>
+
+        <div class="skill-label">Integrations</div>
+        <div class="skill-value">Stripe, Plaid, Twilio, SendGrid, Google Maps, Apple Maps, Spotify, SoundCloud, YouTube</div>
+
+        <div class="skill-label">DevOps</div>
+        <div class="skill-value">App Store &amp; Google Play Deployment, Push Notifications, Analytics, API &amp; Web Deployments</div>
+    </div>
+
+    <!-- ═══════════════ EDUCATION ═══════════════ -->
+    <div class="section-title">Education &amp; Certifications</div>
+    <div class="education-grid">
+        <div class="edu-item">
+            <h4>George Mason University</h4>
+            <div class="edu-detail">B.S., Applied Information Technology — Database Management &amp; Programming</div>
+            <div class="edu-year">2010 – 2012</div>
+        </div>
+        <div class="edu-item">
+            <h4>Northern Virginia Community College</h4>
+            <div class="edu-detail">Associate's Degree, Information Technology</div>
+            <div class="edu-year">2008 – 2010</div>
+        </div>
+    </div>
+    <div class="cert-item">
+        <h4>Certified ScrumMaster (CSM) — Scrum Alliance</h4>
+        <div class="cert-detail">Credential ID: 000739089 · Issued Jan 2018</div>
+    </div>
+
+</body>
+</html>
