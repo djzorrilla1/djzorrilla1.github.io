@@ -1,7 +1,8 @@
 // ─── Canvas particle background ───────────────────────────────────────────────
 const canvas = document.getElementById('bg');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (canvas) {
+if (canvas && !prefersReducedMotion) {
   const ctx = canvas.getContext('2d');
 
   function resizeCanvas() {
@@ -47,33 +48,60 @@ if (canvas) {
   animate();
 }
 
-// ─── Project card Flip effect ──────────────────────────────────────────────
+// ─── Accessible project card flip effect ──────────────────────────────────
 document.querySelectorAll('.flip-card').forEach(card => {
+  const front = card.querySelector('.flip-card-front');
+  const back = card.querySelector('.flip-card-back');
+  const title = card.querySelector('h3')?.textContent.replace('↗', '').trim() || 'project';
+  const frontControl = front?.querySelector('.flip-control');
+  const backControl = back?.querySelector('.flip-control');
+  const detailsId = `${card.id}-details`;
+
+  if (back) back.id = detailsId;
+  frontControl?.setAttribute('aria-controls', detailsId);
+  frontControl?.setAttribute('aria-expanded', 'false');
+  frontControl?.setAttribute('aria-label', `Show case study details for ${title}`);
+  backControl?.setAttribute('aria-label', `Return to ${title} overview`);
+  back?.setAttribute('aria-hidden', 'true');
+  back?.querySelectorAll('a, button').forEach(element => {
+    element.tabIndex = -1;
+  });
+
+  function setFlipped(isFlipped, moveFocus = false) {
+    card.classList.toggle('flipped', isFlipped);
+    frontControl?.setAttribute('aria-expanded', String(isFlipped));
+    front?.setAttribute('aria-hidden', String(isFlipped));
+    back?.setAttribute('aria-hidden', String(!isFlipped));
+
+    front?.querySelectorAll('a, button').forEach(element => {
+      element.tabIndex = isFlipped ? -1 : 0;
+    });
+    back?.querySelectorAll('a, button').forEach(element => {
+      element.tabIndex = isFlipped ? 0 : -1;
+    });
+
+    if (moveFocus) {
+      (isFlipped ? backControl : frontControl)?.focus();
+    }
+  }
+
   card.addEventListener('click', (e) => {
     const clickedLink = e.target.closest('a');
-    
-    // On mobile (≤768px), prevent links from navigating — let the card expand instead
-    const isMobile = window.innerWidth <= 768;
+    const clickedControl = e.target.closest('.flip-control');
 
-    if (isMobile) {
-      // If user tapped a link and the card is already flipped/expanded, allow navigation
-      if (clickedLink && card.classList.contains('flipped')) {
-        e.stopPropagation();
-        return; // let the link navigate normally
-      }
-      // Otherwise block link navigation and toggle the card
-      if (clickedLink) {
-        e.preventDefault();
-      }
-    } else {
-      // On desktop, if they clicked a link, let them navigate without flipping
-      if (clickedLink) {
-        e.stopPropagation();
-        return;
-      }
+    if (clickedLink) {
+      e.stopPropagation();
+      return;
     }
-    
-    card.classList.toggle('flipped');
+
+    setFlipped(!card.classList.contains('flipped'), Boolean(clickedControl));
+  });
+
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && card.classList.contains('flipped')) {
+      e.preventDefault();
+      setFlipped(false, true);
+    }
   });
 });
 
@@ -95,12 +123,21 @@ if (hamburger && navLinks) {
       hamburger.setAttribute('aria-expanded', 'false');
     });
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('mobile-open')) {
+      navLinks.classList.remove('mobile-open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+  });
 }
 
 // ─── Cursor Spotlight Tracker (LERP) ───────────────────────────────────────
 const cursorGlow = document.getElementById('cursor-glow');
 
-if (cursorGlow) {
+if (cursorGlow && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
   let mouseX = -500; // start off-screen
   let mouseY = -500;
   let glowX = mouseX;
@@ -169,4 +206,3 @@ document.querySelectorAll('.flip-card').forEach(card => {
     back.addEventListener('mousemove', (e) => handleMouseMove(e, back));
   }
 });
-

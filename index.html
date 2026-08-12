@@ -5,32 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Darryl Zorrilla — Senior Full-Stack & Mobile Engineer with 10+ years architecting consumer products, scalable backend systems, and cross-platform mobile apps across media, audio, mobility, and social platforms.">
+        content="Darryl Zorrilla is a senior full-stack and mobile engineer with 15+ years shipping production products across native iOS, React Native, real-time APIs, AI, and cloud infrastructure.">
     <meta name="keywords"
         content="Senior Software Engineer, Full-Stack Engineer, Mobile Engineer, iOS, React Native, NestJS, TypeScript, AWS, Portfolio">
-    <meta property="og:title" content="Darryl Zorrilla — Senior Software Engineer">
-    <meta property="og:description" content="10+ years building scalable consumer products and mobile apps.">
-    <title>Darryl Zorrilla — Senior Software Engineer</title>
+    <meta name="theme-color" content="#070b14">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Darryl Zorrilla — Senior Full-Stack &amp; Mobile Engineer">
+    <meta property="og:description" content="15+ years shipping mobile, API, cloud, AI, and real-time products from concept to production.">
+    <meta property="og:image" content="images/portfolio-social.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Darryl Zorrilla — Senior Full-Stack and Mobile Engineer">
+    <meta property="profile:first_name" content="Darryl">
+    <meta property="profile:last_name" content="Zorrilla">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Darryl Zorrilla — Senior Full-Stack &amp; Mobile Engineer">
+    <meta name="twitter:description" content="Mobile · API · Cloud · AI · Real-Time">
+    <meta name="twitter:image" content="images/portfolio-social.jpg">
+    <title>Darryl Zorrilla — Senior Full-Stack &amp; Mobile Engineer</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Darryl Zorrilla",
+            "jobTitle": "Senior Full-Stack & Mobile Engineer",
+            "email": "mailto:djzorrilla@yahoo.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Los Angeles",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/djzorrilla",
+                "https://github.com/djzorrilla"
+            ],
+            "knowsAbout": [
+                "TypeScript",
+                "React Native",
+                "iOS",
+                "NestJS",
+                "Real-time systems",
+                "Cloud infrastructure"
+            ]
+        }
+    </script>
 </head>
 
 <body>
-    <canvas id="bg"></canvas>
-    <div class="background-glow"></div>
-    <div class="background-glow-2"></div>
-    <div class="cursor-glow" id="cursor-glow"></div>
+    <a class="skip-link" href="#projects">Skip to featured work</a>
+    <canvas id="bg" aria-hidden="true"></canvas>
+    <div class="background-glow" aria-hidden="true"></div>
+    <div class="background-glow-2" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
     <!-- ─── NAV ─────────────────────────────────────────── -->
     <header class="hero">
         <nav>
-            <div class="logo">DZ</div>
+            <a class="logo" href="#top" aria-label="Darryl Zorrilla — home">DZ</a>
 
             <div class="nav-links" id="nav-links">
-                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
+                <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="Darryl%20Zorrilla%20Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
@@ -46,7 +89,7 @@
         </nav>
 
         <!-- ─── HERO ──────────────────────────────────────── -->
-        <div class="hero-content">
+        <div class="hero-content" id="top">
             <p class="eyebrow">SENIOR FULL-STACK &amp; MOBILE ENGINEER</p>
 
             <h1>
@@ -55,7 +98,7 @@
             </h1>
 
             <p class="hero-description">
-                15+ years turning ideas into live, production-accessible apps — from native iOS and React Native to
+                15+ years turning ideas into production-ready products — from native iOS and React Native to
                 NestJS APIs,
                 cloud infrastructure, and real-time systems. I've led development at startups and agencies
                 across media, audio, mobility, and social platforms.
@@ -88,6 +131,239 @@
         </div>
     </header>
 
+    <main class="site-main">
+
+    <!-- ─── PROJECTS ─────────────────────────────────────── -->
+    <section class="projects-section" id="projects">
+        <div class="section-header reveal">
+            <p class="section-label">FEATURED WORK</p>
+            <h2>Selected Projects</h2>
+            <p class="section-subtitle">Five products, each showing the problem, my ownership, and the engineering behind the result.</p>
+        </div>
+
+        <div class="project-grid reveal-group">
+
+            <!-- Rekxy -->
+            <div class="flip-card featured reveal" id="card-rekxy">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="images/rekxy.webp" alt="Rekxy app preview" width="1200" height="630" loading="lazy">
+                        </div>
+                        <div class="card-tag">Latest · AI-Powered · Solo Build — Product, Design &amp; Engineering</div>
+                        <h3><a href="https://rekxy.pages.dev" target="_blank" rel="noopener noreferrer">Rekxy
+                                <span class="link-icon">↗</span></a></h3>
+                        <p>
+                            Rekxy turns food videos into places you can actually visit. Paste a TikTok, Instagram Reel,
+                            YouTube, or Facebook link and multimodal AI extracts every restaurant and recommended dish,
+                            maps the results, and organizes them into lists you can save, share, and build together.
+                        </p>
+                        <button class="flip-hint flip-control" type="button">View case study →</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="card-back-header">
+                            <div class="card-back-title">Case Study</div>
+                            <button class="flip-control flip-back" type="button">← Overview</button>
+                        </div>
+                        <ul class="contributions">
+                            <li><strong>Problem:</strong> Food videos inspire visits, but their places and dishes are hard to capture.</li>
+                            <li><strong>Ownership:</strong> Solo product, UX, web, extension, API, AI pipeline &amp; infrastructure.</li>
+                            <li><strong>Technical edge:</strong> Gemini + yt-dlp resolves video mentions into verified Google Places.</li>
+                            <li><strong>Result:</strong> One-tap imports become mapped, collaborative collections with live progress.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Google Gemini</span><span>React</span><span>TypeScript</span><span>NestJS</span>
+                            <span>SQLite</span><span>Socket.IO</span><span>Chrome MV3</span>
+                            <span>Firebase</span><span>Cloudflare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schoolyard -->
+            <div class="flip-card reveal" id="card-schoolyard">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="images/schoolyard-2026.webp" alt="Schoolyard Social platform across laptop, tablet, and phone" width="1200" height="675" loading="lazy">
+                        </div>
+                        <div class="card-tag">Lead Engineer · ISBX</div>
+                        <h3><a href="https://schoolyard-social.com" target="_blank"
+                                rel="noopener noreferrer">Schoolyard
+                                Social <span class="link-icon">↗</span></a></h3>
+                        <p>
+                            The white-label competition platform behind 500+ tournaments and 10,000+ players across
+                            nine sports—combining registration, payments, scheduling, live scoring, and rankings.
+                        </p>
+                        <button class="flip-hint flip-control" type="button">View case study →</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="card-back-header">
+                            <div class="card-back-title">Case Study</div>
+                            <button class="flip-control flip-back" type="button">← Overview</button>
+                        </div>
+                        <ul class="contributions">
+                            <li><strong>Problem:</strong> Clubs were coordinating competitive play through spreadsheets and group chats.</li>
+                            <li><strong>Ownership:</strong> Led architecture across React Native, API, CMS &amp; infrastructure.</li>
+                            <li><strong>Technical edge:</strong> Built tournament, round-robin, scheduling &amp; WebSocket scoring engines.</li>
+                            <li><strong>Result:</strong> 500+ tournaments, 10,000+ players and nine supported sports.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>React Native</span><span>Expo</span><span>NestJS</span><span>TypeScript</span>
+                            <span>PostgreSQL</span><span>Redis</span><span>WebSockets</span>
+                            <span>Stripe</span><span>AWS</span><span>Terraform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ScareScore -->
+            <div class="flip-card reveal" id="card-scarescore">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="images/scarescore.webp" alt="ScareScore mobile and watch biometrics app preview" width="1200" height="675" loading="lazy">
+                        </div>
+                        <div class="card-tag">Senior Engineer · ISBX</div>
+                        <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">ScareScore <span
+                                    class="link-icon">↗</span></a></h3>
+                        <p>
+                            A second-screen horror experience that pairs with Apple Watch to measure heart rate, HRV,
+                            and startle motion during a movie — turning those signals into a live ScareScore friends can
+                            compare.
+                        </p>
+                        <button class="flip-hint flip-control" type="button">View case study →</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="card-back-header">
+                            <div class="card-back-title">Case Study</div>
+                            <button class="flip-control flip-back" type="button">← Overview</button>
+                        </div>
+                        <ul class="contributions">
+                            <li><strong>Problem:</strong> Movie ratings describe opinions, not a viewer's physical fear response.</li>
+                            <li><strong>Ownership:</strong> Mobile architecture, watchOS companion, native bridge, API &amp; cloud delivery.</li>
+                            <li><strong>Technical edge:</strong> Streams HealthKit HR/HRV and CoreMotion through a custom Expo module.</li>
+                            <li><strong>Result:</strong> A synchronized multi-signal ScareScore friends can compare after a movie.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>React Native</span><span>Expo</span><span>watchOS</span><span>SwiftUI</span>
+                            <span>WatchConnectivity</span><span>CoreMotion</span><span>NestJS</span>
+                            <span>TypeScript</span><span>HealthKit</span><span>AWS</span><span>Terraform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Red Bull Radar & Co-Pilot -->
+            <div class="flip-card reveal" id="card-redbull">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="images/redbull.webp" alt="Red Bull app preview" width="1024" height="1024" loading="lazy">
+                        </div>
+                        <div class="card-tag">Lead Engineer · ISBX</div>
+                        <h3><a href="https://www.isbx.com/work/red-bull" target="_blank" rel="noopener noreferrer">Red
+                                Bull
+                                <span class="link-icon">↗</span></a></h3>
+                        <p>
+                            Engineered two Red Bull platforms — Radar (2019), a native Swift iOS inventory tracker for
+                            Red Bull coolers &amp; equipment, and Co-Pilot (2020), an internal iOS tool for Red Bull
+                            event management.
+                        </p>
+                        <button class="flip-hint flip-control" type="button">View case study →</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="card-back-header">
+                            <div class="card-back-title">Case Study</div>
+                            <button class="flip-control flip-back" type="button">← Overview</button>
+                        </div>
+                        <ul class="contributions">
+                            <li><strong>Problem:</strong> Field teams needed reliable equipment tracking and event operations on the move.</li>
+                            <li><strong>Ownership:</strong> Led native iOS architecture across the Radar and Co-Pilot platforms.</li>
+                            <li><strong>Technical edge:</strong> Offline-first Realm/RxSwift workflows with location, AppSync &amp; Cognito.</li>
+                            <li><strong>Result:</strong> Two production field platforms with push, chat, analytics &amp; CI/CD.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Swift</span><span>RxSwift</span><span>RealmSwift</span>
+                            <span>AWS Cognito</span><span>GraphQL</span><span>Firebase</span>
+                            <span>Sencha Touch</span><span>Cordova</span><span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apple Beats -->
+            <div class="flip-card reveal" id="card-beats">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="images/beats.webp" alt="Apple Beats app preview" width="1024" height="1024" loading="lazy">
+                        </div>
+                        <div class="card-tag">iOS Engineer · ISBX</div>
+                        <h3><a href="https://www.isbx.com/work/apple-beats" target="_blank"
+                                rel="noopener noreferrer">Apple (Beats
+                                by Dre) <span class="link-icon">↗</span></a></h3>
+                        <p>
+                            Official companion iOS application for the Beats Pill+ speaker line. Enabled users to
+                            control,
+                            manage, and sync multiple hardware speakers.
+                        </p>
+                        <button class="flip-hint flip-control" type="button">View case study →</button>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="card-back-header">
+                            <div class="card-back-title">Case Study</div>
+                            <button class="flip-control flip-back" type="button">← Overview</button>
+                        </div>
+                        <ul class="contributions">
+                            <li><strong>Problem:</strong> Pill+ owners needed simple control over multi-speaker hardware modes.</li>
+                            <li><strong>Ownership:</strong> Built the official native iOS companion experience at ISBX.</li>
+                            <li><strong>Technical edge:</strong> CoreBluetooth discovery, pairing, state and battery synchronization.</li>
+                            <li><strong>Result:</strong> Shipped DJ and Stereo multi-speaker modes for production Apple hardware.</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Objective-C</span><span>Swift</span><span>CoreBluetooth</span>
+                            <span>UIKit</span><span>Hardware Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="notable-work reveal">
+            <h3>Other Notable Apps Shipped</h3>
+            <ul class="notable-list">
+                <li><strong>SoundFi:</strong> Spatial-audio cinema experience with synchronized playback through personal headphones.</li>
+                <li><strong>HED Unity:</strong> BLE headphone companion with real-time DSP controls and OTA firmware updates.</li>
+                <li><strong>OjO Electric:</strong> Scooter rental apps with IoT telemetry, GPS fleet tracking, and Stripe billing.</li>
+                <li><strong>Vurple:</strong> Civic livestreaming with real-time Q&amp;A, audience polling, and WebRTC video.</li>
+                <li><strong>FriendlyBet:</strong> Social wagering platform for creating, managing, and settling friendly
+                    bets
+                    with a real-time feed.</li>
+                <li><strong>Linktune:</strong> Universal music discovery app combining Spotify, Apple Music, and
+                    SoundCloud.
+                </li>
+                <li><strong>Guard Grabber:</strong> On-demand security and personal protection service platform.</li>
+                <li><strong>Pikkup:</strong> On-demand delivery and moving platform connecting users with drivers and
+                    movers.
+                </li>
+                <li><strong>Inventoryy:</strong> Comprehensive inventory management system for businesses.</li>
+                <li><strong>Ribbon:</strong> Event ticketing platform aggregating inventory from major providers like
+                    Ticketmaster and StubHub.</li>
+                <li><strong>FileKeepers:</strong> Secure enterprise document management and tracking.</li>
+            </ul>
+        </div>
+
+        <div class="archive-link-wrapper reveal">
+            <a href="archive.html" class="archive-link" id="view-archive-btn">
+                View Full Project Archive
+                <span class="archive-arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+
     <!-- ─── ABOUT ────────────────────────────────────────── -->
     <section class="about-section" id="about">
         <div class="section-header reveal">
@@ -98,7 +374,7 @@
         <div class="about-grid">
             <div class="about-text reveal">
                 <div class="about-avatar">
-                    <img src="images/djzorrilla.jpeg" alt="Darryl Zorrilla">
+                    <img src="images/djzorrilla.webp" alt="Darryl Zorrilla" width="400" height="400" loading="lazy">
                 </div>
                 <p>
                     I'm Darryl — a full-stack and mobile engineer based in Los Angeles.
@@ -109,9 +385,8 @@
                 <p>
                     I specialize in the layer where mobile, real-time systems, and backend infrastructure meet.
                     That's not a common combination — most engineers live on one side or the other. I'm comfortable
-                    owning a Native iOS app, or React Native app, the NestJS API it talks to, the AWS infra it runs on,
-                    and the
-                    Terraform config that deploys it.
+                    owning a native iOS or React Native app, the NestJS API it talks to, the AWS infrastructure it runs
+                    on, and the Terraform configuration that deploys it.
                 </p>
                 <p>
                     What makes me different is that I've done this across wildly different domains: IoT and Bluetooth
@@ -172,7 +447,7 @@
                 </div>
             </div>
             <div class="skill-group reveal">
-                <p class="skill-group-label">Frameworks & Libraries</p>
+                <p class="skill-group-label">Frameworks &amp; Libraries</p>
                 <div class="skills-grid">
                     <span>React Native</span>
                     <span>Expo</span>
@@ -196,7 +471,7 @@
                 </div>
             </div>
             <div class="skill-group reveal">
-                <p class="skill-group-label">Cloud & Infra</p>
+                <p class="skill-group-label">Cloud &amp; Infra</p>
                 <div class="skills-grid">
                     <span>AWS (S3, EC2, CloudFront)</span>
                     <span>AWS Lambda / Serverless</span>
@@ -244,7 +519,7 @@
                 </div>
             </div>
             <div class="skill-group reveal">
-                <p class="skill-group-label">DevOps & Tooling</p>
+                <p class="skill-group-label">DevOps &amp; Tooling</p>
                 <div class="skills-grid">
                     <span>Fastlane</span>
                     <span>EAS Build</span>
@@ -255,350 +530,6 @@
                     <span>Analytics &amp; Crashlytics</span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ─── PROJECTS ─────────────────────────────────────── -->
-    <section class="projects-section" id="projects">
-        <div class="section-header reveal">
-            <p class="section-label">FEATURED WORK</p>
-            <h2>Selected Projects</h2>
-            <p class="section-subtitle">Tap a card to see what I built and the tech behind it.</p>
-        </div>
-
-        <div class="project-grid reveal-group">
-
-            <!-- Rekxy -->
-            <div class="flip-card featured reveal" id="card-rekxy">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/rekxy.png" alt="Rekxy app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">Latest · AI-Powered · Solo Build — Product, Design &amp; Engineering</div>
-                        <h3><a href="https://rekxy.pages.dev" target="_blank" rel="noopener noreferrer">Rekxy
-                                <span class="link-icon">↗</span></a></h3>
-                        <p>
-                            Rekxy turns food videos into places you can actually visit. Paste a TikTok, Instagram Reel,
-                            YouTube, or Facebook link and multimodal AI extracts every restaurant and recommended dish,
-                            maps the results, and organizes them into lists you can save, share, and build together.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>Gemini + yt-dlp pipeline converts videos into verified Google Places and dish
-                                recommendations</li>
-                            <li>One-tap PWA/Chrome imports with guest claiming, real-time progress &amp; web push</li>
-                            <li>Role-based collaborative lists with live sync, Leaflet discovery &amp; a spin wheel</li>
-                            <li>Solo TypeScript monorepo: React + CMS, NestJS/SQLite on GCP, Firebase &amp; Cloudflare</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>Google Gemini</span><span>React</span><span>TypeScript</span><span>NestJS</span>
-                            <span>SQLite</span><span>Socket.IO</span><span>Chrome MV3</span>
-                            <span>Firebase</span><span>Cloudflare</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Schoolyard -->
-            <div class="flip-card reveal" id="card-schoolyard">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/schoolyard-2026.png" alt="Schoolyard Social platform across laptop, tablet, and phone" loading="lazy">
-                        </div>
-                        <div class="card-tag">Lead Engineer · ISBX</div>
-                        <h3><a href="https://schoolyard-social.com" target="_blank"
-                                rel="noopener noreferrer">Schoolyard
-                                Social <span class="link-icon">↗</span></a></h3>
-                        <p>
-                            Full-platform sports social app for organizing tournaments, leagues, and events with live
-                            brackets,
-                            real-time leaderboards, and community feeds.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>Architected monorepo covering mobile, API, CMS &amp; infra</li>
-                            <li>Built real-time tournament brackets &amp; round-robin logic</li>
-                            <li>Implemented live leaderboards via WebSockets</li>
-                            <li>Stripe payments &amp; subscription management</li>
-                            <li>AWS + Terraform cloud deployment pipeline</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>React Native</span><span>Expo</span><span>NestJS</span><span>TypeScript</span>
-                            <span>PostgreSQL</span><span>Redis</span><span>WebSockets</span>
-                            <span>Stripe</span><span>AWS</span><span>Terraform</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ScareScore -->
-            <div class="flip-card reveal" id="card-scarescore">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/scarescore.png" alt="ScareScore mobile and watch biometrics app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">Senior Engineer · ISBX</div>
-                        <h3><a href="https://www.isbx.com" target="_blank" rel="noopener noreferrer">ScareScore <span
-                                    class="link-icon">↗</span></a></h3>
-                        <p>
-                            A second-screen horror experience that pairs with Apple Watch to measure heart rate, HRV,
-                            and startle motion during a movie — turning those signals into a live ScareScore friends can
-                            compare.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>React Native/Expo app for horror discovery, synchronized viewing &amp; social reactions</li>
-                            <li>SwiftUI watch companion using HKWorkoutSession, HealthKit HR/HRV &amp; CoreMotion</li>
-                            <li>Custom Expo native module bridging Watch biometrics to the RN layer in real time</li>
-                            <li>Secure AWS (S3, CloudFront) media workflows &amp; Terraform infra</li>
-                            <li>Multi-signal ScareScore engine streaming biometrics during synchronized movie sessions</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>React Native</span><span>Expo</span><span>watchOS</span><span>SwiftUI</span>
-                            <span>WatchConnectivity</span><span>CoreMotion</span><span>NestJS</span>
-                            <span>TypeScript</span><span>HealthKit</span><span>AWS</span><span>Terraform</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SoundFi -->
-            <div class="flip-card reveal" id="card-soundfi">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/soundfi.png" alt="SoundFi app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">Senior Mobile &amp; API Engineer · ISBX</div>
-                        <h3><a href="https://www.isbx.com/work/sound-fi" target="_blank"
-                                rel="noopener noreferrer">SoundFi <span class="link-icon">↗</span></a></h3>
-                        <p>
-                            Immersive 3D spatial audio experience for movie theaters — synchronized audio playback
-                            through personal headphones.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>Native iOS application architecture and development</li>
-                            <li>REST API design and integration for theater venues</li>
-                            <li>Audio session management and headphone routing</li>
-                            <li>Performance optimization for media playback</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>Swift</span><span>Objective-C</span><span>Node.js</span>
-                            <span>REST APIs</span><span>PostgreSQL</span><span>AWS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HED Unity -->
-            <div class="flip-card reveal" id="card-hed">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/hed_unity.png" alt="HED Unity app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">iOS Engineer · ISBX</div>
-                        <h3><a href="https://getunity.com" target="_blank" rel="noopener noreferrer">HED Unity <span
-                                    class="link-icon">↗</span></a></h3>
-                        <p>
-                            Premium iOS companion app for HED Unity headphones — hardware pairing, audio EQ,
-                            and firmware update management.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>BLE hardware pairing &amp; device management</li>
-                            <li>Custom audio EQ with real-time DSP</li>
-                            <li>OTA firmware update delivery system</li>
-                            <li>Premium onboarding &amp; subscription UI</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>Swift</span><span>SwiftUI</span><span>CoreBluetooth</span>
-                            <span>AVFoundation</span><span>StoreKit</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Red Bull Radar & Co-Pilot -->
-            <div class="flip-card reveal" id="card-redbull">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/redbull.png" alt="Red Bull app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">Lead Engineer · ISBX</div>
-                        <h3><a href="https://www.isbx.com/work/red-bull" target="_blank" rel="noopener noreferrer">Red
-                                Bull
-                                <span class="link-icon">↗</span></a></h3>
-                        <p>
-                            Engineered two Red Bull platforms — Radar (2019), a native Swift iOS inventory tracker for
-                            Red Bull coolers &amp; equipment, and Co-Pilot (2020), an internal iOS tool for Red Bull
-                            event management.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>Radar: native Swift iOS app for tracking Red Bull cooler &amp; equipment inventory</li>
-                            <li>Real-time location tracking, offline caching with RealmSwift &amp; RxSwift</li>
-                            <li>Co-Pilot: internal iOS event management tool (MVVM, RxSwift, RealmSwift)</li>
-                            <li>AWS Cognito auth, GraphQL/AppSync, Applozic in-app chat</li>
-                            <li>Firebase push notifications, Crashlytics, Jenkins CI/CD</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>Swift</span><span>RxSwift</span><span>RealmSwift</span>
-                            <span>AWS Cognito</span><span>GraphQL</span><span>Firebase</span>
-                            <span>Sencha Touch</span><span>Cordova</span><span>Node.js</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- OjO Electric -->
-            <div class="flip-card reveal" id="card-ojo">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/ojo.png" alt="OjO Electric app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">Lead Engineer · ISBX</div>
-                        <h3><a href="https://www.isbx.com/work/ojo" target="_blank" rel="noopener noreferrer">OjO
-                                Electric <span class="link-icon">↗</span></a></h3>
-                        <p>
-                            Electric scooter rental platform — featured in Forbes for its stability tech.
-                            Full mobile experience with IoT backend integrations.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>iOS &amp; Android rental &amp; unlock flow</li>
-                            <li>IoT scooter telemetry &amp; GPS tracking integration</li>
-                            <li>Stripe payment &amp; subscription billing</li>
-                            <li>Scalable fleet management backend</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>React Native</span><span>Swift</span><span>Node.js</span>
-                            <span>IoT / MQTT</span><span>Stripe</span><span>AWS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Vurple -->
-            <div class="flip-card reveal" id="card-vurple">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/vurple.png" alt="Vurple app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">Lead Engineer · ISBX</div>
-                        <h3><a href="https://pitchbook.com/profiles/company/484176-25#overview" target="_blank"
-                                rel="noopener noreferrer">Vurple <span class="link-icon">↗</span></a></h3>
-                        <p>
-                            Livestreaming civic engagement platform for real-time interaction between
-                            public officials and their communities.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>Live video streaming with real-time Q&amp;A</li>
-                            <li>Audience polling &amp; reaction system</li>
-                            <li>Native iOS app with WebRTC integration</li>
-                            <li>Scalable streaming backend</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>Swift</span><span>WebRTC</span><span>Objective-C</span>
-                            <span>Node.js</span><span>Firebase</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Apple Beats -->
-            <div class="flip-card reveal" id="card-beats">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="card-image">
-                            <img src="images/beats.png" alt="Apple Beats app preview" loading="lazy">
-                        </div>
-                        <div class="card-tag">iOS Engineer · ISBX</div>
-                        <h3><a href="https://www.isbx.com/work/apple-beats" target="_blank"
-                                rel="noopener noreferrer">Apple (Beats
-                                by Dre) <span class="link-icon">↗</span></a></h3>
-                        <p>
-                            Official companion iOS application for the Beats Pill+ speaker line. Enabled users to
-                            control,
-                            manage, and sync multiple hardware speakers.
-                        </p>
-                        <span class="flip-hint">Tap to see tech stack →</span>
-                    </div>
-                    <div class="flip-card-back">
-                        <div class="card-back-title">What I Built</div>
-                        <ul class="contributions">
-                            <li>Native iOS companion app for Beats Pill+</li>
-                            <li>Bluetooth LE device discovery and pairing</li>
-                            <li>Custom multi-speaker sync (DJ and Stereo modes)</li>
-                            <li>Hardware state management and battery monitoring</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span>Objective-C</span><span>Swift</span><span>CoreBluetooth</span>
-                            <span>UIKit</span><span>Hardware Integration</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="notable-work reveal">
-            <h3>Other Notable Apps Shipped</h3>
-            <ul class="notable-list">
-                <li><strong>FriendlyBet:</strong> Social wagering platform for creating, managing, and settling friendly
-                    bets
-                    with a real-time feed.</li>
-                <li><strong>Linktune:</strong> Universal music discovery app combining Spotify, Apple Music, and
-                    SoundCloud.
-                </li>
-                <li><strong>Guard Grabber:</strong> On-demand security and personal protection service platform.</li>
-                <li><strong>Pikkup:</strong> On-demand delivery and moving platform connecting users with drivers and
-                    movers.
-                </li>
-                <li><strong>Inventoryy:</strong> Comprehensive inventory management system for businesses.</li>
-                <li><strong>Ribbon:</strong> Event ticketing platform aggregating inventory from major providers like
-                    Ticketmaster and StubHub.</li>
-                <li><strong>FileKeepers:</strong> Secure enterprise document management and tracking.</li>
-            </ul>
-        </div>
-
-        <div class="archive-link-wrapper reveal">
-            <a href="archive.html" class="archive-link" id="view-archive-btn">
-                View Full Project Archive
-                <span class="archive-arrow">→</span>
-            </a>
         </div>
     </section>
 
@@ -622,7 +553,7 @@
                     <p>Architecting and building full-stack social platforms from the ground up — including Schoolyard
                         Social,
                         ScareScore, and FriendlyBet. Leading development across mobile apps, NestJS APIs, CMS, and cloud
-                        infra.</p>
+                        infrastructure; Schoolyard now supports 500+ tournaments and 10,000+ players.</p>
                 </div>
             </div>
 
@@ -673,40 +604,29 @@
         </div>
     </section>
 
-    <!-- ─── NOW BUILDING ────────────────────────────────── -->
+    <!-- ─── CURRENTLY SHIPPING ──────────────────────────── -->
     <section class="now-building-section" id="now-building">
         <div class="section-header reveal">
-            <p class="section-label">WHAT'S NEXT</p>
-            <h2>Now Building &amp; Exploring</h2>
-            <p class="section-subtitle">Side explorations and technical directions I'm actively invested in.</p>
+            <p class="section-label">CURRENTLY SHIPPING</p>
+            <h2>Building Rekxy End to End</h2>
+            <p class="section-subtitle">The current product work where AI, real-time systems, and cross-platform delivery meet.</p>
         </div>
 
         <div class="now-grid reveal-group">
             <div class="now-card reveal">
-                <span class="now-emoji">📡</span>
-                <h4>BLE Mesh Networking</h4>
-                <p>Low-power Bluetooth mesh topologies for peer-to-peer device coordination without infrastructure
-                    dependency.
-                </p>
+                <span class="now-emoji" aria-hidden="true">🎬</span>
+                <h4>Multimodal Video Intelligence</h4>
+                <p>Converting video, audio, captions, and on-screen text into verified restaurants and dish-level recommendations.</p>
             </div>
             <div class="now-card reveal">
-                <span class="now-emoji">🎪</span>
-                <h4>Festival Proximity Systems</h4>
-                <p>Radar-style real-time presence for large venues — letting attendees discover who and what is nearby
-                    without a
-                    server in the loop.</p>
+                <span class="now-emoji" aria-hidden="true">🤝</span>
+                <h4>Collaborative Discovery</h4>
+                <p>Shared collections, role-based collaboration, live synchronization, maps, and a decision wheel built for groups.</p>
             </div>
             <div class="now-card reveal">
-                <span class="now-emoji">🎮</span>
-                <h4>Real-Time Multiplayer</h4>
-                <p>Lightweight WebSocket and gRPC patterns for turn-based and synchronous multiplayer at consumer scale.
-                </p>
-            </div>
-            <div class="now-card reveal">
-                <span class="now-emoji">🤖</span>
-                <h4>AI-Powered Product Features</h4>
-                <p>Multimodal LLM pipelines in production — turning video, audio, and on-screen text into structured,
-                    product-ready data, shipped in Rekxy.</p>
+                <span class="now-emoji" aria-hidden="true">↗</span>
+                <h4>One-Tap Delivery</h4>
+                <p>A PWA share target, Chrome extension, guest trial, web push, and resilient import pipeline that reduce friction.</p>
             </div>
         </div>
     </section>
@@ -791,6 +711,8 @@
             </p>
         </div>
     </section>
+
+    </main>
 
     <script src="script.js" defer></script>
 </body>
