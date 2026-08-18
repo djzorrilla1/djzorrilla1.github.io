@@ -441,6 +441,9 @@ section {
   perspective: 1200px;
   -webkit-perspective: 1200px;
   height: 540px;
+  /* The back face is sized by the column the grid hands the card, not by the
+     viewport, so the compact typography below is a container query. */
+  container-type: inline-size;
   cursor: pointer;
 }
 
@@ -493,6 +496,10 @@ section {
   transform: rotateY(180deg);
   background: linear-gradient(135deg, rgba(0, 212, 170, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
   border-color: rgba(0, 212, 170, 0.2);
+  /* Last resort only: the sizing below keeps every case study inside the card,
+     so this scrolls rather than silently hiding a line if copy ever grows. */
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 /* Card Images */
@@ -725,6 +732,68 @@ section {
   border: 1px solid rgba(0, 212, 170, 0.2);
   color: var(--accent);
   letter-spacing: 0.3px;
+}
+
+/* A multi-column grid can hand a card a ~340px column at desktop widths — a
+   narrower card than the single-column mobile layout gets. Case-study copy
+   wraps to more lines there, so tighten it by card width, wherever that
+   happens, instead of guessing viewport breakpoints. Declared after the base
+   rules above because a container query adds no specificity of its own. */
+/* Very small phones (and the Fold's cover screen) get a second tier: the copy
+   tightens again and the card itself grows, since one column of taller cards
+   costs nothing when they are stacked. */
+@container (max-width: 305px) {
+  .flip-card-back {
+    padding: 16px;
+  }
+
+  .contributions {
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .contributions li {
+    font-size: 0.74rem;
+    line-height: 1.32;
+  }
+
+  .tech-tags {
+    gap: 5px;
+  }
+
+  .tech-tags span {
+    font-size: 0.6rem;
+    padding: 3px 7px;
+  }
+}
+
+@container (max-width: 420px) {
+  .flip-card-back {
+    padding: 22px;
+  }
+
+  .card-back-header {
+    margin-bottom: 12px;
+  }
+
+  .contributions {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .contributions li {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .tech-tags {
+    gap: 6px;
+  }
+
+  .tech-tags span {
+    font-size: 0.66rem;
+    padding: 4px 9px;
+  }
 }
 
 /* ─── Notable Work ───────────────────────────────────── */
@@ -1339,6 +1408,22 @@ section {
 
   .education-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .flip-card,
+  .flip-card.featured {
+    height: 640px;
+  }
+}
+
+/* Below ~345px the longest case study needs the room; the cards are stacked
+   here, so growing them is cheaper than hiding a line of it. */
+@media (max-width: 345px) {
+  .flip-card,
+  .flip-card.featured {
+    height: 760px;
   }
 }
 
