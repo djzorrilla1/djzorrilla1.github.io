@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><style>html,body{margin:0}</style>
+<iframe id="f" src="index.html" style="border:0;height:4000px"></iframe>
+<script>
+const w = parseInt(location.hash.slice(1)||"390",10);
+const f = document.getElementById('f');
+f.style.width = w+'px';
+f.addEventListener('load', () => setTimeout(() => {
+  const d = f.contentDocument;
+  const out = ["WIDTH "+f.contentWindow.innerWidth];
+  d.querySelectorAll('.flip-card').forEach(c => {
+    [['front', c.querySelector('.flip-card-front')], ['back', c.querySelector('.flip-card-back')]].forEach(([n, face]) => {
+      const fr = face.getBoundingClientRect();
+      let worst = 0, who = '';
+      face.querySelectorAll('*').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (!r.height && !r.width) return;
+        const over = r.bottom - fr.bottom;
+        if (over > worst) { worst = over; who = el.tagName + '.' + (el.className || ''); }
+      });
+      out.push(c.id+' '+n+' cardH='+Math.round(fr.height)+' over='+Math.round(worst)+(worst>1?'  <<< CLIPPED '+who:''));
+    });
+  });
+  document.documentElement.innerHTML = '<pre>@@'+out.join('~~')+'@@</pre>';
+}, 1200));
+</script>

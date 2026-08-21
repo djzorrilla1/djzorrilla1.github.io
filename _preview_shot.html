@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><style>html,body{margin:0;background:#080b12}</style>
+<iframe id="f" src="index.html" style="border:0;height:2600px"></iframe>
+<script>
+const [w, flip] = location.hash.slice(1).split(',');
+const f = document.getElementById('f');
+f.style.width = w + 'px';
+f.addEventListener('load', () => setTimeout(() => {
+  const d = f.contentDocument;
+  d.querySelectorAll('.reveal').forEach(e => { e.style.opacity = 1; e.style.transform = 'none'; });
+  d.querySelector('.hero').style.display = 'none';
+  if (flip) d.querySelector('#card-salpakan').classList.add('flipped');
+}, 900));
+</script>
